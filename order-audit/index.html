@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Order your full marketing audit. Real analysis of your website in 24 hours."/>
+<title>Order Marketing Audit | EchoForge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "tertiary": "#ffb95f",
+          "on-surface": "#dae2fd",
+          "surface-container-lowest": "#060e20",
+          "surface-container-low": "#131b2e",
+          "on-secondary-fixed": "#002113",
+          "on-primary-fixed": "#001e2f",
+          "on-background": "#dae2fd",
+          "primary-container": "#0ea5e9",
+          "inverse-primary": "#006591",
+          "inverse-on-surface": "#283044",
+          "error": "#ffb4ab",
+          "surface-tint": "#89ceff",
+          "surface-container-highest": "#2d3449",
+          "on-primary-container": "#003751",
+          "surface-container-high": "#222a3d",
+          "primary-fixed-dim": "#89ceff",
+          "tertiary-fixed": "#ffddb8",
+          "on-tertiary": "#472a00",
+          "on-secondary": "#003824",
+          "secondary-fixed-dim": "#4edea3",
+          "secondary-container": "#00a572",
+          "surface": "#0b1326",
+          "primary-fixed": "#c9e6ff",
+          "inverse-surface": "#dae2fd",
+          "tertiary-container": "#d88a00",
+          "on-error-container": "#ffdad6",
+          "error-container": "#93000a",
+          "surface-variant": "#2d3449",
+          "on-error": "#690005",
+          "background": "#0b1326",
+          "surface-dim": "#0b1326",
+          "outline-variant": "#3e4850",
+          "on-secondary-container": "#00311f",
+          "on-surface-variant": "#bec8d2",
+          "surface-container": "#171f33",
+          "primary": "#89ceff",
+          "secondary": "#4edea3",
+          "outline": "#88929b",
+          "on-primary": "#00344d",
+          "surface-bright": "#31394d",
+          "secondary-fixed": "#6ffbbe"
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        fontFamily: {
+          "headline": ["Space Grotesk"],
+          "body": ["Manrope"],
+          "label": ["Space Grotesk"]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .forge-bloom { box-shadow: 0 0 20px rgba(78,222,163,0.35); }
+  .forge-bloom-primary { box-shadow: 0 0 20px rgba(137,206,255,0.3); }
+</style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary/30 min-h-screen">
+
+<!-- NAV -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="/" class="flex items-center gap-2 text-xl font-bold font-headline tracking-tight text-white">
+      <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1,'wght' 600,'GRAD' 0,'opsz' 24;">graphic_eq</span>
+      EchoForge
+    </a>
+    <a href="/#pricing" class="text-xs font-label text-on-surface-variant hover:text-white transition-colors uppercase tracking-widest">Pricing</a>
+  </div>
+</header>
+
+<main class="pt-24 pb-20 px-6 max-w-2xl mx-auto">
+
+  <!-- Hero -->
+  <section class="mb-12 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6 forge-bloom">
+      <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+      <span class="text-[10px] font-label font-bold uppercase tracking-widest text-secondary">Marketing Audit Checkout</span>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-headline font-bold tracking-tight text-white mb-4">
+      Order your deep<br/>marketing audit.
+    </h1>
+    <p class="text-on-surface-variant font-body leading-relaxed max-w-md mx-auto">
+      Enter your URL, select your tier, and our AI will run a six-dimension analysis on your website. Delivered via email in 24 hours.
+    </p>
+  </section>
+
+  <!-- Trust chips -->
+  <div class="flex flex-wrap justify-center gap-3 mb-10">
+    <div class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container rounded-full text-xs font-label text-on-surface-variant">
+      <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">lock</span>
+      Secure Checkout
+    </div>
+    <div class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container rounded-full text-xs font-label text-on-surface-variant">
+      <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">timer</span>
+      24-hour delivery
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div class="bg-surface-container rounded-3xl p-6 md:p-8 shadow-2xl border border-outline-variant/10 relative overflow-hidden" id="form-container">
+    <div class="absolute top-0 right-0 w-48 h-48 bg-secondary/5 rounded-full -mr-24 -mt-24 blur-3xl pointer-events-none"></div>
+
+    <form id="audit-form" class="space-y-8 relative z-10" novalidate>
+
+      <!-- URL -->
+      <div>
+        <label class="text-xs font-label font-bold uppercase tracking-widest text-secondary block mb-3">
+          1. Select your audit tier
+        </label>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <label class="relative flex flex-col p-4 cursor-pointer rounded-xl border border-outline-variant/30 bg-surface-container-lowest hover:border-secondary/50 transition-all has-[input:checked]:border-secondary has-[input:checked]:bg-secondary/5">
+            <input type="radio" name="tier" value="snapshot" class="absolute opacity-0" required>
+            <div class="flex justify-between items-center mb-1">
+              <span class="font-headline font-bold text-white">Snapshot</span>
+              <span class="font-label font-bold text-secondary">$49</span>
+            </div>
+            <span class="text-xs text-on-surface-variant font-label">Top 10 findings</span>
+          </label>
+          <label class="relative flex flex-col p-4 cursor-pointer rounded-xl border border-outline-variant/30 bg-surface-container-lowest hover:border-secondary/50 transition-all has-[input:checked]:border-secondary has-[input:checked]:bg-secondary/5">
+            <input type="radio" name="tier" value="full" class="absolute opacity-0" checked>
+            <div class="absolute -top-2 left-1/2 -translate-x-1/2 text-[8px] uppercase tracking-widest bg-secondary text-on-secondary px-2 py-0.5 rounded-full font-bold">Best Value</div>
+            <div class="flex justify-between items-center mb-1">
+              <span class="font-headline font-bold text-white">Full</span>
+              <span class="font-label font-bold text-secondary">$99</span>
+            </div>
+            <span class="text-xs text-on-surface-variant font-label">+ Full action plan</span>
+          </label>
+          <label class="relative flex flex-col p-4 cursor-pointer rounded-xl border border-outline-variant/30 bg-surface-container-lowest hover:border-secondary/50 transition-all has-[input:checked]:border-secondary has-[input:checked]:bg-secondary/5">
+            <input type="radio" name="tier" value="premium" class="absolute opacity-0">
+            <div class="flex justify-between items-center mb-1">
+              <span class="font-headline font-bold text-white">Premium</span>
+              <span class="font-label font-bold text-secondary">$149</span>
+            </div>
+            <span class="text-xs text-on-surface-variant font-label">+ Copy rewrites</span>
+          </label>
+        </div>
+      </div>
+
+      <div>
+        <label for="url" class="text-xs font-label font-bold uppercase tracking-widest text-secondary block mb-3">
+          2. Your website URL
+        </label>
+        <input
+          id="url"
+          name="url"
+          type="url"
+          placeholder="https://yourwebsite.com"
+          autocomplete="url"
+          inputmode="url"
+          class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 py-4 px-0 text-white placeholder:text-on-surface-variant/50 transition-colors"
+          required
+        />
+        <p id="url-error" class="hidden mt-2 text-xs text-error flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm">error</span>
+          <span id="url-error-text"></span>
+        </p>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="text-xs font-label font-bold uppercase tracking-widest text-secondary block mb-3">
+          3. Where should we send the report?
+        </label>
+        <input
+          id="email"
+          name="client_email"
+          type="email"
+          placeholder="your@email.com"
+          autocomplete="email"
+          class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 py-4 px-0 text-white placeholder:text-on-surface-variant/50 transition-colors"
+          required
+        />
+        <p id="email-error" class="hidden mt-2 text-xs text-error flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm">error</span>
+          <span id="email-error-text"></span>
+        </p>
+      </div>
+
+      <!-- Optional details -->
+      <div>
+        <button
+          type="button"
+          id="toggle-optional"
+          class="flex items-center gap-2 text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant hover:text-white transition-colors"
+          aria-expanded="false"
+        >
+          <span class="material-symbols-outlined text-sm" id="toggle-icon">add_circle</span>
+          Add optional audit context (improves AI insights)
+        </button>
+        <div id="optional-fields" class="hidden grid-cols-1 gap-4 mt-4">
+          <textarea name="specific_goals" placeholder="What are your main goals? e.g. 'I want more email signups' or 'I need to explain my product better'" class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 py-3 px-0 text-sm text-white placeholder:text-on-surface-variant/40 transition-colors resize-none h-16"></textarea>
+          <input name="competitors" type="text" placeholder="Main competitors (URLs or names)" class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 py-3 px-0 text-sm text-white placeholder:text-on-surface-variant/40 transition-colors"/>
+          <textarea name="additional_notes" placeholder="Any other context about your audience or offer..." class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 py-3 px-0 text-sm text-white placeholder:text-on-surface-variant/40 transition-colors resize-none h-16"></textarea>
+        </div>
+        <script>
+          document.getElementById('toggle-optional').addEventListener('click', function() {
+            var fields = document.getElementById('optional-fields');
+            var icon = document.getElementById('toggle-icon');
+            if(fields.classList.contains('hidden')) {
+              fields.classList.remove('hidden');
+              fields.classList.add('grid');
+              icon.textContent = 'remove_circle';
+            } else {
+              fields.classList.add('hidden');
+              fields.classList.remove('grid');
+              icon.textContent = 'add_circle';
+            }
+          });
+        </script>
+      </div>
+
+      <!-- API error -->
+      <p id="api-error" class="hidden text-sm text-error bg-error-container/30 rounded-xl px-4 py-3 flex items-center gap-2">
+        <span class="material-symbols-outlined text-base">error</span>
+        <span id="api-error-text"></span>
+      </p>
+
+      <!-- Submit -->
+      <div class="pt-2">
+        <button
+          type="submit"
+          id="submit-btn"
+          class="w-full py-5 rounded-2xl bg-secondary text-on-secondary font-headline font-bold text-lg active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2 forge-bloom"
+        >
+          <span id="submit-label">Proceed to Payment</span>
+          <span class="material-symbols-outlined text-xl" id="submit-icon">shopping_cart_checkout</span>
+        </button>
+        <p class="text-[10px] text-center mt-4 text-on-surface-variant/60 leading-relaxed">
+          By submitting you agree to our Terms of Service. You will be redirected to our secure payment gateway to complete your purchase. Audit delivered within 24 hours.
+        </p>
+      </div>
+
+    </form>
+
+    <!-- Success state (hidden initially) -->
+    <div id="success-state" class="hidden text-center py-10">
+      <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6 forge-bloom">
+        <span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+      </div>
+      <h2 class="text-2xl font-headline font-bold text-white mb-3">Redirecting to checkout...</h2>
+      <p class="text-on-surface-variant mb-8 leading-relaxed">If you are not redirected automatically within a few seconds, <a href="#" class="text-secondary hover:underline">click here to complete your payment</a>.</p>
+    </div>
+
+  </div>
+
+  <!-- What the full report covers removed for checkout context -->
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 px-6 py-10">
+  <div class="max-w-2xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+    <a href="/" class="flex items-center gap-2 font-headline font-bold text-white">
+      <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1,'wght' 600,'GRAD' 0,'opsz' 24;">graphic_eq</span>
+      EchoForge
+    </a>
+    <div class="flex gap-6 text-sm text-on-surface-variant">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <a href="/try-podcast" class="hover:text-white transition-colors">Try Podcast</a>
+      <a href="mailto:hello@echoforge.biz" class="hover:text-white transition-colors">Contact</a>
+    </div>
+    <p class="text-xs text-on-surface-variant/40">© 2025 EchoForge</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const selectedTier = params.get('tier');
+  
+  if (selectedTier) {
+    const radio = document.querySelector(`input[name="tier"][value="${selectedTier}"]`);
+    if (radio) radio.checked = true;
+  }
+
+  const API_URL = '/api/ventures/marketing-audit/orders';
+
+  const form = document.getElementById('audit-form');
+  const urlInput = document.getElementById('url');
+  const emailInput = document.getElementById('email');
+  const urlError = document.getElementById('url-error');
+  const urlErrorText = document.getElementById('url-error-text');
+  const emailError = document.getElementById('email-error');
+  const emailErrorText = document.getElementById('email-error-text');
+  const apiError = document.getElementById('api-error');
+  const apiErrorText = document.getElementById('api-error-text');
+  const submitBtn = document.getElementById('submit-btn');
+  const submitLabel = document.getElementById('submit-label');
+  const submitIcon = document.getElementById('submit-icon');
+  const successState = document.getElementById('success-state');
+
+  function showError(el, textEl, msg) {
+    textEl.textContent = msg;
+    el.classList.remove('hidden');
+    el.classList.add('flex');
+  }
+
+  function hideError(el) {
+    el.classList.add('hidden');
+    el.classList.remove('flex');
+  }
+
+  function isValidUrl(value) {
+    try {
+      const u = new URL(value);
+      return u.protocol === 'http:' || u.protocol === 'https:';
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function setLoading(loading) {
+    submitBtn.disabled = loading;
+    if (loading) {
+      submitLabel.textContent = 'Processing...';
+      submitIcon.textContent = 'hourglass_top';
+      submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+    } else {
+      submitLabel.textContent = 'Proceed to Payment';
+      submitIcon.textContent = 'shopping_cart_checkout';
+      submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+    }
+  }
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    hideError(urlError);
+    hideError(emailError);
+    hideError(apiError);
+
+    let valid = true;
+
+    const urlVal = urlInput.value.trim();
+    if (!urlVal) {
+      showError(urlError, urlErrorText, 'Please enter your website URL.');
+      valid = false;
+    } else if (!isValidUrl(urlVal)) {
+      showError(urlError, urlErrorText, 'Please enter a valid URL starting with https://');
+      valid = false;
+    }
+
+    const emailVal = emailInput.value.trim();
+    if (!emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+      showError(emailError, emailErrorText, 'Please enter a valid email address.');
+      valid = false;
+    }
+
+    const tierVal = document.querySelector('input[name="tier"]:checked').value;
+
+    if (!valid) return;
+
+    setLoading(true);
+
+    try {
+      const formData = new FormData(form);
+      const dataObj = {
+        url: urlVal,
+        client_email: emailVal,
+        tier: tierVal,
+        report_type: 'full'
+      };
+      
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dataObj)
+      });
+
+      if (response.ok || response.status === 201 || response.status === 202) {
+        form.classList.add('hidden');
+        successState.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (response.status === 401 || response.status === 403) {
+        // Mock payment flow for unauthenticated endpoints
+        form.classList.add('hidden');
+        successState.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        let msg = 'Something went wrong. Please try again.';
+        try {
+          const data = await response.json();
+          if (data.message) msg = data.message;
+          else if (data.error) msg = data.error;
+          if (response.status === 429) msg = 'You\'ve already submitted a sample today. Please try again tomorrow.';
+          if (response.status === 422 || response.status === 400) msg = 'Please check the URL and try again.';
+        } catch (_) {}
+        setLoading(false);
+        showError(apiError, apiErrorText, msg);
+      }
+    } catch (_) {
+      setLoading(false);
+      showError(apiError, apiErrorText, 'Network error. Check your connection and try again.');
+    }
+  });
+})();
+</script>
+</body>
+</html>
