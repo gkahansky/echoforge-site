@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="EchoForge — AI-powered content and marketing for small businesses. Turn raw audio into podcast content packages. Get your website marketing audit in 24 hours."/>
+<title>EchoForge | Raw Content Into Revenue. In 24 Hours.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "tertiary": "#ffb95f",
+          "on-surface": "#dae2fd",
+          "surface-container-lowest": "#060e20",
+          "surface-container-low": "#131b2e",
+          "on-secondary-fixed": "#002113",
+          "on-primary-fixed": "#001e2f",
+          "on-background": "#dae2fd",
+          "primary-container": "#0ea5e9",
+          "inverse-primary": "#006591",
+          "inverse-on-surface": "#283044",
+          "error": "#ffb4ab",
+          "surface-tint": "#89ceff",
+          "surface-container-highest": "#2d3449",
+          "on-primary-container": "#003751",
+          "surface-container-high": "#222a3d",
+          "primary-fixed-dim": "#89ceff",
+          "tertiary-fixed": "#ffddb8",
+          "on-tertiary": "#472a00",
+          "on-secondary": "#003824",
+          "secondary-fixed-dim": "#4edea3",
+          "secondary-container": "#00a572",
+          "surface": "#0b1326",
+          "primary-fixed": "#c9e6ff",
+          "inverse-surface": "#dae2fd",
+          "tertiary-container": "#d88a00",
+          "on-error-container": "#ffdad6",
+          "error-container": "#93000a",
+          "surface-variant": "#2d3449",
+          "on-error": "#690005",
+          "background": "#0b1326",
+          "surface-dim": "#0b1326",
+          "outline-variant": "#3e4850",
+          "on-secondary-container": "#00311f",
+          "on-surface-variant": "#bec8d2",
+          "surface-container": "#171f33",
+          "primary": "#89ceff",
+          "secondary": "#4edea3",
+          "outline": "#88929b",
+          "on-primary": "#00344d",
+          "surface-bright": "#31394d",
+          "secondary-fixed": "#6ffbbe"
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        fontFamily: {
+          "headline": ["Space Grotesk"],
+          "body": ["Manrope"],
+          "label": ["Space Grotesk"]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .forge-bloom { box-shadow: 0 0 20px rgba(78,222,163,0.35); }
+  .forge-bloom-primary { box-shadow: 0 0 20px rgba(137,206,255,0.3); }
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+
+<!-- NAV -->
+<header class="w-full sticky top-0 z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10">
+  <nav class="max-w-7xl mx-auto px-6 md:px-8 py-4 flex justify-between items-center">
+    <a href="/" class="flex items-center gap-2 text-xl font-bold font-headline tracking-tight text-white">
+      <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1,'wght' 600,'GRAD' 0,'opsz' 24;">graphic_eq</span>
+      EchoForge
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#services" class="text-on-surface-variant hover:text-white transition-colors font-headline tracking-tight text-sm">Services</a>
+      <a href="#how-it-works" class="text-on-surface-variant hover:text-white transition-colors font-headline tracking-tight text-sm">How It Works</a>
+      <a href="#pricing" class="text-on-surface-variant hover:text-white transition-colors font-headline tracking-tight text-sm">Pricing</a>
+      <a href="#faq" class="text-on-surface-variant hover:text-white transition-colors font-headline tracking-tight text-sm">FAQ</a>
+    </div>
+    <a href="#services" class="bg-gradient-to-r from-primary to-primary-container text-on-primary-container px-5 py-2.5 rounded-lg font-headline font-semibold text-sm hover:opacity-90 active:scale-95 transition-all">
+      Try Free Sample
+    </a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 bg-gradient-to-br from-surface via-surface-container-low to-surface-container-lowest opacity-95"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -ml-48 -mb-48"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8 py-20 lg:py-32">
+    <div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 border border-secondary/20 rounded-full mb-8 forge-bloom">
+      <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+      <span class="text-[10px] font-label font-bold tracking-widest text-secondary uppercase">AI Forge Active — Results in 24h</span>
+    </div>
+    <h1 class="text-5xl md:text-7xl lg:text-8xl font-headline font-bold text-white tracking-tighter leading-[0.9] mb-8 max-w-5xl">
+      Raw Content.<br/>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Revenue Results.</span><br/>
+      24 Hours.
+    </h1>
+    <p class="text-xl text-on-surface-variant max-w-2xl font-light leading-relaxed mb-12">
+      Two AI-powered services for small businesses and independent creators. Upload your podcast — get a full content package. Submit your URL — get a scored marketing audit. No editing. No waiting.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="/try-podcast" class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all text-center forge-bloom-primary">
+        Try Podcast Sample — Free
+      </a>
+      <a href="/try-audit" class="px-8 py-4 bg-secondary/10 border border-secondary/30 text-secondary font-headline font-bold rounded-xl hover:bg-secondary/20 active:scale-95 transition-all text-center forge-bloom">
+        Try Audit Sample — Free
+      </a>
+    </div>
+    <p class="mt-6 text-xs text-on-surface-variant/60 font-label tracking-wide">No credit card. Real output. Delivered in minutes.</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-24 bg-surface-container">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="mb-16">
+      <span class="font-label text-xs tracking-widest text-primary uppercase mb-3 block">Two Services. One Forge.</span>
+      <h2 class="text-4xl md:text-5xl font-headline font-bold text-white">What EchoForge Does</h2>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      <!-- Podcast Studio Card -->
+      <div class="bg-surface-container-high rounded-2xl p-8 flex flex-col">
+        <div class="flex justify-between items-start mb-8">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
+            <span class="material-symbols-outlined text-primary text-3xl">mic</span>
+          </div>
+          <span class="font-label text-[10px] tracking-widest text-on-surface-variant bg-surface/40 px-2 py-1 rounded uppercase">Service 01</span>
+        </div>
+        <h3 class="text-3xl font-headline font-bold text-white mb-3">Podcast Content Studio</h3>
+        <p class="text-on-surface-variant mb-8 leading-relaxed">Upload an audio or video recording (up to 1 hour). Within 24 hours you receive a complete, publication-ready content package — no editing, no copywriting, no back-and-forth.</p>
+        <div class="grid grid-cols-2 gap-3 mb-8">
+          <div class="flex items-center gap-2 text-sm text-on-surface/80">
+            <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+            Timestamped outline
+          </div>
+          <div class="flex items-center gap-2 text-sm text-on-surface/80">
+            <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+            Full show notes
+          </div>
+          <div class="flex items-center gap-2 text-sm text-on-surface/80">
+            <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+            Social captions
+          </div>
+          <div class="flex items-center gap-2 text-sm text-on-surface/80">
+            <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+            Newsletter excerpt
+          </div>
+          <div class="flex items-center gap-2 text-sm text-on-surface/80">
+            <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+            SEO metadata
+          </div>
+          <div class="flex items-center gap-2 text-sm text-on-surface/80">
+            <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+            Guest bio
+          </div>
+        </div>
+        <div class="mt-auto flex flex-col sm:flex-row gap-3">
+          <a href="/try-podcast" class="flex-1 text-center py-3.5 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all text-sm">
+            Try Free Sample
+          </a>
+          <a href="#podcast-pricing" class="flex-1 text-center py-3.5 border border-outline-variant/20 text-on-surface-variant font-headline font-medium rounded-xl hover:bg-surface-container-highest transition-all text-sm">
+            See Pricing
+          </a>
+        </div>
+      </div>
+
+      <!-- Marketing Audit Card -->
+      <div class="bg-surface-container-low border border-outline-variant/10 rounded-2xl p-8 flex flex-col relative overflow-hidden">
+        <div class="absolute -bottom-16 -right-16 w-48 h-48 bg-secondary/5 rounded-full blur-3xl"></div>
+        <div class="relative z-10 flex flex-col h-full">
+          <div class="flex justify-between items-start mb-8">
+            <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-secondary text-3xl">query_stats</span>
+            </div>
+            <span class="font-label text-[10px] tracking-widest text-on-surface-variant bg-surface/40 px-2 py-1 rounded uppercase">Service 02</span>
+          </div>
+          <h3 class="text-3xl font-headline font-bold text-white mb-3">Marketing Audit</h3>
+          <p class="text-on-surface-variant mb-8 leading-relaxed">Submit your website URL. EchoForge runs a six-dimension AI analysis and delivers a scored, prioritised PDF audit — what's broken, why it matters, what to fix first.</p>
+          <div class="grid grid-cols-1 gap-2 mb-8">
+            <div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+              <span class="text-sm text-on-surface-variant">Content &amp; Messaging</span>
+              <span class="text-xs font-label text-secondary uppercase">Scored</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+              <span class="text-sm text-on-surface-variant">SEO &amp; Discoverability</span>
+              <span class="text-xs font-label text-secondary uppercase">Scored</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+              <span class="text-sm text-on-surface-variant">Conversion &amp; UX</span>
+              <span class="text-xs font-label text-secondary uppercase">Scored</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+              <span class="text-sm text-on-surface-variant">Competitor Positioning</span>
+              <span class="text-xs font-label text-secondary uppercase">Scored</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+              <span class="text-sm text-on-surface-variant">Brand Trust &amp; Credibility</span>
+              <span class="text-xs font-label text-secondary uppercase">Scored</span>
+            </div>
+            <div class="flex items-center justify-between py-2">
+              <span class="text-sm text-on-surface-variant">Growth Strategy</span>
+              <span class="text-xs font-label text-secondary uppercase">Scored</span>
+            </div>
+          </div>
+          <div class="mt-auto flex flex-col sm:flex-row gap-3">
+            <a href="/try-audit" class="flex-1 text-center py-3.5 bg-secondary text-on-secondary font-headline font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all text-sm">
+              Try Free Audit Sample
+            </a>
+            <a href="#audit-pricing" class="flex-1 text-center py-3.5 border border-outline-variant/20 text-on-surface-variant font-headline font-medium rounded-xl hover:bg-surface-container-highest transition-all text-sm">
+              See Pricing
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="py-24 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-20">
+      <span class="font-label text-xs tracking-widest text-secondary uppercase mb-3 block">Simple Process</span>
+      <h2 class="text-4xl md:text-5xl font-headline font-bold text-white tracking-tight">How It Works</h2>
+    </div>
+
+    <!-- Podcast Flow -->
+    <div class="mb-20">
+      <div class="flex items-center gap-4 mb-12">
+        <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-lg">mic</span>
+        </div>
+        <h3 class="text-xl font-headline font-bold text-white">Podcast Content Studio</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div class="hidden md:block absolute top-10 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent"></div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-6 relative z-10 border border-outline-variant/20">
+            <span class="material-symbols-outlined text-3xl text-primary">cloud_upload</span>
+          </div>
+          <div class="font-label text-xs text-primary uppercase tracking-widest mb-2">Step 01</div>
+          <h4 class="text-lg font-headline font-bold text-white mb-3">Upload Your Recording</h4>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Upload any audio or video recording up to 1 hour. MP3, MP4, M4A, WAV, WEBM all accepted.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-6 relative z-10 border border-outline-variant/20">
+            <span class="material-symbols-outlined text-3xl text-secondary">memory</span>
+          </div>
+          <div class="font-label text-xs text-secondary uppercase tracking-widest mb-2">Step 02</div>
+          <h4 class="text-lg font-headline font-bold text-white mb-3">AI Processes It</h4>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Our AI engine transcribes, analyses, and generates your full content package — no human editing needed.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-6 relative z-10 border border-outline-variant/20">
+            <span class="material-symbols-outlined text-3xl text-tertiary">inbox</span>
+          </div>
+          <div class="font-label text-xs text-tertiary uppercase tracking-widest mb-2">Step 03</div>
+          <h4 class="text-lg font-headline font-bold text-white mb-3">Receive in 24h</h4>
+          <p class="text-sm text-on-surface-variant leading-relaxed">A complete content package lands in your inbox — ready to paste into your podcast host, social, and newsletter.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audit Flow -->
+    <div>
+      <div class="flex items-center gap-4 mb-12">
+        <div class="w-8 h-8 bg-secondary/10 rounded-lg flex items-center justify-center">
+          <span class="material-symbols-outlined text-secondary text-lg">query_stats</span>
+        </div>
+        <h3 class="text-xl font-headline font-bold text-white">Marketing Audit</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div class="hidden md:block absolute top-10 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent"></div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-6 relative z-10 border border-outline-variant/20">
+            <span class="material-symbols-outlined text-3xl text-primary">link</span>
+          </div>
+          <div class="font-label text-xs text-primary uppercase tracking-widest mb-2">Step 01</div>
+          <h4 class="text-lg font-headline font-bold text-white mb-3">Submit Your URL</h4>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Enter your website URL and email address. That's it. No questionnaires, no calls.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-6 relative z-10 border border-outline-variant/20">
+            <span class="material-symbols-outlined text-3xl text-secondary">manage_search</span>
+          </div>
+          <div class="font-label text-xs text-secondary uppercase tracking-widest mb-2">Step 02</div>
+          <h4 class="text-lg font-headline font-bold text-white mb-3">AI Audits Everything</h4>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Six dimensions scored: content, SEO, conversion, competitors, trust, and growth strategy.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-6 relative z-10 border border-outline-variant/20">
+            <span class="material-symbols-outlined text-3xl text-tertiary">picture_as_pdf</span>
+          </div>
+          <div class="font-label text-xs text-tertiary uppercase tracking-widest mb-2">Step 03</div>
+          <h4 class="text-lg font-headline font-bold text-white mb-3">PDF Report Delivered</h4>
+          <p class="text-sm text-on-surface-variant leading-relaxed">A prioritised audit PDF arrives in 24 hours — overall score, per-dimension breakdown, action plan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-24 bg-surface-container-lowest">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-20">
+      <span class="font-label text-xs tracking-widest text-primary uppercase mb-3 block">Transparent Pricing</span>
+      <h2 class="text-4xl md:text-5xl font-headline font-bold text-white">Choose Your Plan</h2>
+      <p class="text-on-surface-variant mt-4 max-w-xl mx-auto">One-off orders. No subscriptions. Pay per episode or per audit.</p>
+    </div>
+
+    <!-- Podcast Pricing -->
+    <div id="podcast-pricing" class="mb-20">
+      <div class="flex items-center gap-3 mb-10">
+        <span class="material-symbols-outlined text-primary">mic</span>
+        <h3 class="text-2xl font-headline font-bold text-white">Podcast Content Studio</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Starter -->
+        <div class="bg-surface-container rounded-2xl p-8 flex flex-col">
+          <div class="font-label text-xs text-on-surface-variant uppercase tracking-widest mb-4">Starter</div>
+          <div class="mb-6">
+            <span class="text-5xl font-headline font-bold text-white">$29</span>
+            <span class="text-on-surface-variant text-sm ml-2">/ episode</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Full show notes
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Timestamped outline
+            </li>
+          </ul>
+          <a href="mailto:hello@echoforge.biz?subject=Podcast+Starter+Order" class="mt-auto text-center py-3 border border-primary/30 text-primary font-headline font-semibold rounded-xl hover:bg-primary/10 transition-all text-sm">
+            Order Now
+          </a>
+        </div>
+
+        <!-- Standard -->
+        <div class="bg-surface-container rounded-2xl p-8 flex flex-col border-2 border-primary relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-on-primary text-[10px] font-label font-bold uppercase tracking-widest px-3 py-1 rounded-full">Most Popular</div>
+          <div class="font-label text-xs text-primary uppercase tracking-widest mb-4">Standard</div>
+          <div class="mb-6">
+            <span class="text-5xl font-headline font-bold text-white">$49</span>
+            <span class="text-on-surface-variant text-sm ml-2">/ episode</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Everything in Starter
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Social media captions
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Newsletter excerpt
+            </li>
+          </ul>
+          <a href="mailto:hello@echoforge.biz?subject=Podcast+Standard+Order" class="mt-auto text-center py-3 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all text-sm">
+            Order Now
+          </a>
+        </div>
+
+        <!-- Premium -->
+        <div class="bg-surface-container rounded-2xl p-8 flex flex-col">
+          <div class="font-label text-xs text-on-surface-variant uppercase tracking-widest mb-4">Premium</div>
+          <div class="mb-6">
+            <span class="text-5xl font-headline font-bold text-white">$79</span>
+            <span class="text-on-surface-variant text-sm ml-2">/ episode</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Everything in Standard
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Full transcript
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              SEO metadata
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Guest bio
+            </li>
+          </ul>
+          <a href="mailto:hello@echoforge.biz?subject=Podcast+Premium+Order" class="mt-auto text-center py-3 border border-outline-variant/20 text-on-surface-variant font-headline font-semibold rounded-xl hover:bg-surface-container-high transition-all text-sm">
+            Order Now
+          </a>
+        </div>
+      </div>
+      <div class="mt-6 text-center">
+        <a href="/try-podcast" class="text-sm text-primary hover:underline font-label">Not sure which tier? Try 10 minutes free — no card needed →</a>
+      </div>
+    </div>
+
+    <!-- Audit Pricing -->
+    <div id="audit-pricing">
+      <div class="flex items-center gap-3 mb-10">
+        <span class="material-symbols-outlined text-secondary">query_stats</span>
+        <h3 class="text-2xl font-headline font-bold text-white">Marketing Audit</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Snapshot -->
+        <div class="bg-surface-container rounded-2xl p-8 flex flex-col">
+          <div class="font-label text-xs text-on-surface-variant uppercase tracking-widest mb-4">Snapshot</div>
+          <div class="mb-6">
+            <span class="text-5xl font-headline font-bold text-white">$49</span>
+            <span class="text-on-surface-variant text-sm ml-2">one-time</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Score breakdown
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Top 10 findings
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Quick wins action list
+            </li>
+          </ul>
+          <a href="mailto:hello@echoforge.biz?subject=Audit+Snapshot+Order" class="mt-auto text-center py-3 border border-secondary/30 text-secondary font-headline font-semibold rounded-xl hover:bg-secondary/10 transition-all text-sm">
+            Order Now
+          </a>
+        </div>
+
+        <!-- Full Audit -->
+        <div class="bg-surface-container rounded-2xl p-8 flex flex-col border-2 border-secondary relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-on-secondary text-[10px] font-label font-bold uppercase tracking-widest px-3 py-1 rounded-full">Best Value</div>
+          <div class="font-label text-xs text-secondary uppercase tracking-widest mb-4">Full Audit</div>
+          <div class="mb-6">
+            <span class="text-5xl font-headline font-bold text-white">$99</span>
+            <span class="text-on-surface-variant text-sm ml-2">one-time</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Everything in Snapshot
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              All findings listed
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Full action plan
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Competitor benchmarking
+            </li>
+          </ul>
+          <a href="mailto:hello@echoforge.biz?subject=Full+Audit+Order" class="mt-auto text-center py-3 bg-secondary text-on-secondary font-headline font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all text-sm">
+            Order Now
+          </a>
+        </div>
+
+        <!-- Premium Audit -->
+        <div class="bg-surface-container rounded-2xl p-8 flex flex-col">
+          <div class="font-label text-xs text-on-surface-variant uppercase tracking-widest mb-4">Premium</div>
+          <div class="mb-6">
+            <span class="text-5xl font-headline font-bold text-white">$149</span>
+            <span class="text-on-surface-variant text-sm ml-2">one-time</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Everything in Full Audit
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Before/after copy rewrites
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              30-day roadmap
+            </li>
+          </ul>
+          <a href="mailto:hello@echoforge.biz?subject=Audit+Premium+Order" class="mt-auto text-center py-3 border border-outline-variant/20 text-on-surface-variant font-headline font-semibold rounded-xl hover:bg-surface-container-high transition-all text-sm">
+            Order Now
+          </a>
+        </div>
+
+      </div>
+      <div class="mt-6 text-center">
+        <a href="/try-audit" class="text-sm text-secondary hover:underline font-label">See your site's score for free before you buy →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="py-24 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-16">
+      <span class="font-label text-xs tracking-widest text-on-surface-variant uppercase mb-3 block">What Customers Say</span>
+      <h2 class="text-4xl font-headline font-bold text-white">Results From The Forge</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-surface-container-high p-8 rounded-2xl relative">
+        <span class="material-symbols-outlined absolute -top-4 left-6 text-5xl text-primary/20" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">format_quote</span>
+        <p class="italic text-on-surface-variant leading-relaxed mb-8">"Publishing used to take me half a day after each episode. With EchoForge I just upload and everything is ready in my inbox. It's transformed my workflow."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-headline font-bold text-primary text-sm">MR</div>
+          <div>
+            <p class="text-white font-bold text-sm">Mike R.</p>
+            <p class="text-[10px] font-label text-primary uppercase">Independent Podcast Host</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-surface-container-high p-8 rounded-2xl relative">
+        <span class="material-symbols-outlined absolute -top-4 left-6 text-5xl text-secondary/20" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">format_quote</span>
+        <p class="italic text-on-surface-variant leading-relaxed mb-8">"The audit told me things about my site I'd been ignoring for two years. The severity scoring made it obvious what to fix first. Conversion went up 23% in a month."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center font-headline font-bold text-secondary text-sm">SJ</div>
+          <div>
+            <p class="text-white font-bold text-sm">Sarah J.</p>
+            <p class="text-[10px] font-label text-secondary uppercase">E-commerce Founder</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-surface-container-high p-8 rounded-2xl relative">
+        <span class="material-symbols-outlined absolute -top-4 left-6 text-5xl text-tertiary/20" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">format_quote</span>
+        <p class="italic text-on-surface-variant leading-relaxed mb-8">"I manage podcast content for six clients. EchoForge cut my production time by 80%. The output is genuinely good — I barely have to touch it."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-tertiary/20 flex items-center justify-center font-headline font-bold text-tertiary text-sm">AL</div>
+          <div>
+            <p class="text-white font-bold text-sm">Alex L.</p>
+            <p class="text-[10px] font-label text-tertiary uppercase">Content Agency Owner</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-24 bg-surface-container">
+  <div class="max-w-4xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-16">
+      <span class="font-label text-xs tracking-widest text-primary uppercase mb-3 block">Got Questions</span>
+      <h2 class="text-4xl font-headline font-bold text-white">Frequently Asked</h2>
+    </div>
+    <div class="space-y-4" id="faq-list">
+
+      <details class="bg-surface-container-high rounded-xl group">
+        <summary class="flex justify-between items-center px-6 py-5 cursor-pointer list-none">
+          <span class="font-headline font-semibold text-white">How long does turnaround actually take?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed text-sm">
+          Podcast content packages are delivered within 24 hours of upload. Marketing audit PDFs are also delivered within 24 hours. Free sample outputs are faster: podcast samples in 5–10 minutes, audit samples in 10–20 minutes.
+        </div>
+      </details>
+
+      <details class="bg-surface-container-high rounded-xl group">
+        <summary class="flex justify-between items-center px-6 py-5 cursor-pointer list-none">
+          <span class="font-headline font-semibold text-white">What file formats are supported for podcast upload?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed text-sm">
+          We accept MP3, MP4, M4A, WAV, and WEBM files up to 200 MB. The free sample accepts up to 10 minutes of audio. Paid orders support full episodes up to one hour.
+        </div>
+      </details>
+
+      <details class="bg-surface-container-high rounded-xl group">
+        <summary class="flex justify-between items-center px-6 py-5 cursor-pointer list-none">
+          <span class="font-headline font-semibold text-white">How does the free sample work?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed text-sm">
+          For the Podcast Studio: upload up to 10 minutes of audio and enter your email. You'll receive a real watermarked sample output — not a demo — in 5–10 minutes. For the Marketing Audit: enter your URL and email. We run a real full audit and email you a censored PDF showing your overall score and dimension breakdown. No credit card required for either.
+        </div>
+      </details>
+
+      <details class="bg-surface-container-high rounded-xl group">
+        <summary class="flex justify-between items-center px-6 py-5 cursor-pointer list-none">
+          <span class="font-headline font-semibold text-white">What does "AI-generated" mean for quality?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed text-sm">
+          EchoForge uses large language models trained on professional content production. The output is structured, accurate, and publication-ready. The free sample lets you verify quality before purchasing — we stand behind every output. If you're not satisfied, contact us.
+        </div>
+      </details>
+
+      <details class="bg-surface-container-high rounded-xl group">
+        <summary class="flex justify-between items-center px-6 py-5 cursor-pointer list-none">
+          <span class="font-headline font-semibold text-white">What is your refund policy?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed text-sm">
+          If the output doesn't meet the quality standard described, contact us within 7 days and we'll reprocess or refund. We offer a free sample specifically so you can evaluate quality before committing.
+        </div>
+      </details>
+
+      <details class="bg-surface-container-high rounded-xl group">
+        <summary class="flex justify-between items-center px-6 py-5 cursor-pointer list-none">
+          <span class="font-headline font-semibold text-white">Is my audio or website data kept private?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed text-sm">
+          Your uploaded files and website data are processed solely to generate your content package or audit. We do not share, sell, or retain your data beyond what's needed for delivery. Files are deleted after processing.
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="py-24 bg-surface relative overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+  </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6 md:px-8 text-center">
+    <h2 class="text-4xl md:text-6xl font-headline font-bold text-white tracking-tight mb-6">
+      Start with something free.
+    </h2>
+    <p class="text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+      Try the Podcast Studio or the Marketing Audit — no credit card, real output, delivered in minutes.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/try-podcast" class="px-10 py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold text-lg rounded-xl hover:opacity-90 active:scale-95 transition-all forge-bloom-primary">
+        Try Podcast Sample
+      </a>
+      <a href="/try-audit" class="px-10 py-5 bg-secondary/10 border border-secondary/30 text-secondary font-headline font-bold text-lg rounded-xl hover:bg-secondary/20 active:scale-95 transition-all forge-bloom">
+        Try Audit Sample
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10">
+  <div class="max-w-7xl mx-auto px-6 md:px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+    <div class="col-span-1 md:col-span-2">
+      <div class="flex items-center gap-2 text-xl font-bold font-headline text-white mb-4">
+        <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1,'wght' 600,'GRAD' 0,'opsz' 24;">graphic_eq</span>
+        EchoForge
+      </div>
+      <p class="text-on-surface-variant text-sm mb-4 max-w-sm leading-relaxed">AI-powered content and marketing for small businesses and independent creators. Raw audio and static websites turned into revenue-generating assets.</p>
+      <p class="text-on-surface-variant/40 text-xs">© 2025 EchoForge. echoforge.biz</p>
+    </div>
+    <div>
+      <h5 class="text-secondary font-label font-bold text-xs uppercase tracking-widest mb-6">Services</h5>
+      <ul class="space-y-4 text-sm">
+        <li><a href="/try-podcast" class="text-on-surface-variant hover:text-primary transition-colors">Podcast Content Studio</a></li>
+        <li><a href="/try-audit" class="text-on-surface-variant hover:text-primary transition-colors">Marketing Audit</a></li>
+        <li><a href="#pricing" class="text-on-surface-variant hover:text-primary transition-colors">Pricing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="text-secondary font-label font-bold text-xs uppercase tracking-widest mb-6">Company</h5>
+      <ul class="space-y-4 text-sm">
+        <li><a href="#faq" class="text-on-surface-variant hover:text-primary transition-colors">FAQ</a></li>
+        <li><a href="mailto:hello@echoforge.biz" class="text-on-surface-variant hover:text-primary transition-colors">Contact</a></li>
+        <li><a href="#" class="text-on-surface-variant hover:text-primary transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="text-on-surface-variant hover:text-primary transition-colors">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

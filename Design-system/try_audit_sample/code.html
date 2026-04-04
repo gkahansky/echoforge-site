@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EchoForge | Free Website Audit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ffb4ab",
+                    "on-secondary-container": "#00311f",
+                    "on-surface": "#dae2fd",
+                    "on-background": "#dae2fd",
+                    "surface-container-highest": "#2d3449",
+                    "outline-variant": "#3e4850",
+                    "secondary": "#4edea3",
+                    "surface-bright": "#31394d",
+                    "primary-fixed": "#c9e6ff",
+                    "on-secondary-fixed-variant": "#005236",
+                    "inverse-on-surface": "#283044",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-container": "#d88a00",
+                    "surface-tint": "#89ceff",
+                    "error-container": "#93000a",
+                    "surface": "#0b1326",
+                    "on-primary-fixed": "#001e2f",
+                    "on-surface-variant": "#bec8d2",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-secondary": "#003824",
+                    "on-primary-container": "#003751",
+                    "primary": "#89ceff",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "surface-dim": "#0b1326",
+                    "primary-fixed-dim": "#89ceff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "inverse-primary": "#006591",
+                    "surface-container-high": "#222a3d",
+                    "secondary-fixed-dim": "#4edea3",
+                    "inverse-surface": "#dae2fd",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-secondary-fixed": "#002113",
+                    "primary-container": "#0ea5e9",
+                    "on-primary": "#00344d",
+                    "tertiary": "#ffb95f",
+                    "background": "#0b1326",
+                    "on-error": "#690005",
+                    "surface-container-low": "#131b2e",
+                    "tertiary-fixed": "#ffddb8",
+                    "surface-variant": "#2d3449",
+                    "outline": "#88929b",
+                    "surface-container": "#171f33",
+                    "on-tertiary": "#472a00",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "secondary-container": "#00a572",
+                    "surface-container-lowest": "#060e20",
+                    "on-tertiary-container": "#4a2c00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .forge-glow {
+            box-shadow: 0 0 15px 2px rgba(78, 222, 163, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#0b1326]/70 backdrop-blur-md shadow-[0_16px_32px_rgba(14,165,233,0.08)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2 text-2xl font-bold font-headline text-white">
+<span class="material-symbols-outlined text-[#0EA5E9]" data-icon="graphic_eq">graphic_eq</span>
+<span>EchoForge</span>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-4 py-2 rounded-lg text-xs font-headline font-medium uppercase tracking-widest active:scale-95 transition-transform">
+                Get Started
+            </button>
+</div>
+</nav>
+<main class="pt-24 pb-12 px-6">
+<!-- Hero Section -->
+<section class="mb-12">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary rounded-full forge-glow"></span>
+<span class="text-[10px] font-headline font-medium uppercase tracking-[0.2em] text-secondary">Precision Engine Active</span>
+</div>
+<h1 class="text-4xl font-bold font-headline tracking-tight text-white leading-tight">
+                    Real analysis on your site, not a <span class="text-primary italic font-light">generic checklist.</span>
+</h1>
+<p class="text-on-surface-variant text-lg font-light leading-relaxed max-w-md">
+                    Our AI-powered forge audits your site’s deep architecture. Delivered in 10-20 minutes.
+                </p>
+</div>
+</section>
+<!-- Audit Form Card -->
+<section class="bg-surface-container rounded-3xl p-8 mb-12 shadow-2xl relative overflow-hidden">
+<!-- Decorative Subtle Light -->
+<div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="text-xs font-headline font-bold uppercase tracking-[0.15em] text-tertiary mb-8">Initiate Forge Audit</h2>
+<form class="space-y-8">
+<div class="space-y-2">
+<label class="text-xs font-headline text-outline block ml-1">WEBSITE URL</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none focus:ring-0 text-white p-4 rounded-xl placeholder:text-surface-variant transition-all focus:bg-surface-container-low" placeholder="https://yourwebsite.com" type="url"/>
+<div class="absolute bottom-0 left-0 w-full h-[2px] bg-outline-variant opacity-20"></div>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-tertiary transition-all duration-500 group-focus-within:w-full"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-headline text-outline block ml-1">EMAIL ADDRESS</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none focus:ring-0 text-white p-4 rounded-xl placeholder:text-surface-variant transition-all focus:bg-surface-container-low" placeholder="name@company.com" type="email"/>
+<div class="absolute bottom-0 left-0 w-full h-[2px] bg-outline-variant opacity-20"></div>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold py-5 rounded-2xl flex items-center justify-center gap-3 active:scale-95 transition-all shadow-lg shadow-primary/20" type="submit">
+<span>RUN AUDIT NOW</span>
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-4 text-[10px] text-on-surface-variant font-headline tracking-widest uppercase">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="credit_card_off">credit_card_off</span>
+                            No Credit Card
+                        </div>
+<div class="w-1 h-1 bg-surface-variant rounded-full"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="timer">timer</span>
+                            10-20 MINS
+                        </div>
+</div>
+</form>
+</div>
+</section>
+<!-- Feature Grid (Mobile Optimized) -->
+<section class="grid grid-cols-1 gap-6 mb-12">
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<span class="material-symbols-outlined text-primary mb-4 block" data-icon="architecture">architecture</span>
+<h3 class="font-headline font-bold text-white mb-2">Technical Blueprint</h3>
+<p class="text-sm text-on-surface-variant">We map DOM depth, rendering bottlenecks, and LCP issues that generic tools miss.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<span class="material-symbols-outlined text-secondary mb-4 block" data-icon="monitoring">monitoring</span>
+<h3 class="font-headline font-bold text-white mb-2">Growth Vector</h3>
+<p class="text-sm text-on-surface-variant">Identify the top 3 high-impact changes that will move your conversion needle immediately.</p>
+</div>
+</section>
+<!-- Loading State Indicator (Static Preview) -->
+<section class="border border-outline-variant/10 rounded-2xl p-6 flex items-center justify-between bg-surface-container-lowest">
+<div class="flex flex-col gap-1">
+<span class="text-xs font-headline text-secondary uppercase tracking-widest">Forge Status</span>
+<span class="text-sm text-white">System Ready for Analysis</span>
+</div>
+<div class="relative w-12 h-12 flex items-center justify-center">
+<div class="absolute inset-0 border-4 border-primary/20 rounded-full"></div>
+<div class="absolute inset-0 border-4 border-t-primary rounded-full animate-spin"></div>
+<span class="material-symbols-outlined text-primary text-sm" data-icon="settings_slow_motion">settings_slow_motion</span>
+</div>
+</section>
+<!-- Proof Section -->
+<section class="mt-16 text-center">
+<p class="text-[10px] font-headline text-outline-variant uppercase tracking-[0.3em] mb-8">Trusted by Digital Craftsmen</p>
+<div class="flex justify-center gap-8 opacity-40 grayscale filter">
+<span class="font-headline font-black italic text-xl">AVANT</span>
+<span class="font-headline font-black italic text-xl">LUMINA</span>
+<span class="font-headline font-black italic text-xl">KODEX</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#171f33] rounded-t-[32px] pt-16 pb-8 px-8">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="flex flex-col gap-6">
+<div class="text-xl font-bold font-headline text-white">EchoForge</div>
+<p class="text-sm text-gray-400 font-body leading-relaxed">Precision-engineered growth audits for the modern web.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<span class="text-xs font-headline uppercase tracking-widest text-[#4edea3]">Solutions</span>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Podcast</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Audits</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Results</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-xs font-headline uppercase tracking-widest text-[#4edea3]">Legal</span>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Terms</a>
+<a class="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="pt-12 border-t border-outline-variant/10 text-center">
+<p class="text-[10px] font-headline text-gray-500 uppercase tracking-widest">
+                    © 2024 EchoForge AI. Forged for growth.
+                </p>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation (Mobile Requirement) -->
+<div class="fixed bottom-0 left-0 w-full bg-[#0b1326]/80 backdrop-blur-lg border-t border-outline-variant/10 px-8 py-3 md:hidden z-50">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="search" data-weight="fill" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="text-[10px] font-headline font-bold">Audit</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-headline">Results</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="text-[10px] font-headline">Forge Labs</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-headline">Profile</span>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#233143",
+                    "primary-fixed-dim": "#ffb95f",
+                    "outline-variant": "#534434",
+                    "error-container": "#93000a",
+                    "primary-container": "#f59e0b",
+                    "tertiary-container": "#a6b1c8",
+                    "on-primary": "#472a00",
+                    "secondary-fixed-dim": "#b9c8de",
+                    "surface-container": "#171f33",
+                    "secondary-container": "#39485a",
+                    "on-surface": "#dae2fd",
+                    "primary-fixed": "#ffddb8",
+                    "on-tertiary-fixed-variant": "#3c475a",
+                    "surface-variant": "#2d3449",
+                    "on-error": "#690005",
+                    "on-secondary-fixed": "#0d1c2d",
+                    "primary": "#ffc174",
+                    "inverse-on-surface": "#283044",
+                    "on-primary-fixed-variant": "#653e00",
+                    "on-tertiary-container": "#394457",
+                    "outline": "#a08e7a",
+                    "on-primary-fixed": "#2a1700",
+                    "on-tertiary": "#263143",
+                    "surface": "#0b1326",
+                    "tertiary-fixed": "#d8e3fb",
+                    "surface-dim": "#0b1326",
+                    "tertiary-fixed-dim": "#bcc7de",
+                    "surface-bright": "#31394d",
+                    "background": "#0b1326",
+                    "error": "#ffb4ab",
+                    "inverse-primary": "#855300",
+                    "surface-container-lowest": "#060e20",
+                    "secondary": "#b9c8de",
+                    "on-background": "#dae2fd",
+                    "surface-tint": "#ffb95f",
+                    "secondary-fixed": "#d4e4fa",
+                    "on-tertiary-fixed": "#111c2d",
+                    "surface-container-highest": "#2d3449",
+                    "on-secondary-fixed-variant": "#39485a",
+                    "on-secondary-container": "#a7b6cc",
+                    "on-surface-variant": "#d8c3ad",
+                    "inverse-surface": "#dae2fd",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-high": "#222a3d",
+                    "surface-container-low": "#131b2e",
+                    "tertiary": "#c1cce4",
+                    "on-primary-container": "#613b00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(11, 19, 38, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .asymmetric-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+      @media (max-width: 768px) {
+        .asymmetric-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-xl">
+<div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-400 text-2xl" data-icon="graphic_eq">graphic_eq</span>
+<span class="text-2xl font-bold tracking-tighter text-amber-400 uppercase font-headline">Echoforge</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-amber-400 font-bold border-b-2 border-amber-400 pb-1 font-headline text-sm uppercase tracking-widest" href="#">Services</a>
+<a class="text-slate-300 hover:text-amber-200 transition-colors font-headline text-sm uppercase tracking-widest" href="#">Case Studies</a>
+<a class="text-slate-300 hover:text-amber-200 transition-colors font-headline text-sm uppercase tracking-widest" href="#">Audits</a>
+<a class="text-slate-300 hover:text-amber-200 transition-colors font-headline text-sm uppercase tracking-widest" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-md font-headline font-bold text-xs uppercase tracking-widest hover:scale-95 active:scale-90 transition-all duration-300">
+                Get Quote
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-32">
+<div class="asymmetric-grid gap-16 items-center">
+<div class="space-y-8">
+<span class="inline-block px-4 py-1 rounded-full bg-surface-container-high text-primary font-headline text-xs font-bold tracking-[0.2em] uppercase border border-primary/20">Service Spotlight</span>
+<h1 class="text-7xl font-headline font-bold leading-[0.9] tracking-tighter text-on-surface">
+                        The Podcast <span class="text-primary italic">Echo</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-xl font-light leading-relaxed">
+                        Transforming raw sonic data into polished digital assets. We architect your voice into a cross-platform narrative with surgical precision.
+                    </p>
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-4xl font-headline font-bold text-primary">$49</span>
+<span class="text-[10px] uppercase tracking-widest text-outline">Per Episode</span>
+</div>
+<div class="h-12 w-[1px] bg-outline-variant/30"></div>
+<button class="px-8 py-4 bg-primary text-on-primary font-headline font-bold uppercase tracking-widest rounded-md hover:bg-primary-container transition-all">
+                            Initialize Project
+                        </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<img class="relative rounded-xl grayscale hover:grayscale-0 transition-all duration-700 w-full aspect-square object-cover shadow-2xl" data-alt="Professional studio condenser microphone in a dark moody setting with amber rim lighting and technical sound wave overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0WTkWjbtTQTPTQpxKyQm0IBRy2eP_I1maadRbtb5OaZm5HaStPY3HlbVnRL-5dockk56MmzbYZoPNnRdmEyhBLWHndnZmNzalSNckLjCKryyB5_WMsy9d9x85xrC7t4p3XZCswf9-fVNdYW7-hp8hpPFh-0Gve8oKbcVmXmqlNOJqWRYsCcyYEoDNgCKdk0uOQU-elNhApKR4RH9wz7Qs-K_LuGNfK7_ql7vQ5Gmpxv3qKt2bbAy5-04m88mD-14Keq4a-MhsU0A"/>
+</div>
+</div>
+</section>
+<!-- Process Bento Grid -->
+<section class="mb-32 space-y-12">
+<div class="flex justify-between items-end">
+<h2 class="text-4xl font-headline font-bold tracking-tighter uppercase">The Technical Workflow</h2>
+<div class="text-right">
+<p class="text-[10px] font-headline tracking-[0.3em] uppercase text-outline">Version 4.2.0</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Step 1 -->
+<div class="p-8 bg-surface-container-low rounded-xl flex flex-col justify-between min-h-[400px] border border-transparent hover:border-primary/20 transition-all duration-500">
+<div>
+<span class="text-5xl font-headline font-extrabold text-surface-variant/50">01</span>
+<h3 class="text-2xl font-headline font-bold mt-4 text-primary">Raw Input</h3>
+<p class="mt-4 text-on-surface-variant font-light leading-relaxed">Transmit your raw .wav or .mp4 archives via our encrypted portal. We accept all high-fidelity formats.</p>
+</div>
+<div class="mt-8 flex items-center gap-4 p-4 bg-surface-container-lowest rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="upload_file">upload_file</span>
+<span class="text-xs font-mono tracking-tighter text-outline">Awaiting signal...</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-8 bg-surface-container-high rounded-xl flex flex-col justify-between min-h-[400px] shadow-2xl scale-105 z-10 border border-primary/10">
+<div>
+<span class="text-5xl font-headline font-extrabold text-primary/20">02</span>
+<h3 class="text-2xl font-headline font-bold mt-4 text-primary">The Refinement</h3>
+<p class="mt-4 text-on-surface-variant font-light leading-relaxed">Our sonic architects and AI neural networks perform deep-layer transcription and structural audits.</p>
+</div>
+<div class="mt-8 relative h-16 w-full flex items-center justify-center overflow-hidden rounded-lg bg-surface-container-lowest">
+<!-- Custom Waveform Visual -->
+<div class="flex gap-[2px] items-end h-8">
+<div class="w-1 bg-primary h-4"></div>
+<div class="w-1 bg-primary h-8"></div>
+<div class="w-1 bg-primary h-6"></div>
+<div class="w-1 bg-primary h-10"></div>
+<div class="w-1 bg-primary h-4"></div>
+<div class="w-1 bg-primary h-12"></div>
+<div class="w-1 bg-primary h-7"></div>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-8 bg-surface-container-low rounded-xl flex flex-col justify-between min-h-[400px] border border-transparent hover:border-primary/20 transition-all duration-500">
+<div>
+<span class="text-5xl font-headline font-extrabold text-surface-variant/50">03</span>
+<h3 class="text-2xl font-headline font-bold mt-4 text-primary">The Echo</h3>
+<p class="mt-4 text-on-surface-variant font-light leading-relaxed">Receive a strategic package including high-impact show notes, verbatim transcripts, and viral-ready captions.</p>
+</div>
+<div class="mt-8 flex items-center gap-4 p-4 bg-surface-container-lowest rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-xs font-mono tracking-tighter text-outline">Deployment successful.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Matrix -->
+<section class="mb-32">
+<div class="bg-surface-container-low rounded-xl p-12 overflow-hidden relative">
+<div class="absolute top-0 right-0 p-12 opacity-10">
+<span class="material-symbols-outlined text-[200px]" data-icon="terminal">terminal</span>
+</div>
+<h2 class="text-4xl font-headline font-bold mb-16 tracking-tighter">System Specifications</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-12 relative z-10">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+<h4 class="font-headline font-bold uppercase tracking-widest text-sm">Voice-Matched Writing</h4>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Our writers utilize tonal mapping to mirror your specific cadence and vocabulary, ensuring authenticity in every word.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+<h4 class="font-headline font-bold uppercase tracking-widest text-sm">Verbatim Accuracy</h4>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Eliminate the "robotic" feel of generic AI. We provide 99.9% accuracy with human-in-the-loop verification.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="speed">speed</span>
+<h4 class="font-headline font-bold uppercase tracking-widest text-sm">24-Hour Delivery</h4>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">The digital cycle never sleeps. We deliver your complete asset package within one orbital rotation of upload.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="edit_note">edit_note</span>
+<h4 class="font-headline font-bold uppercase tracking-widest text-sm">SEO Architecture</h4>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Show notes designed for visibility, integrating keywords organically for maximum reach across all platforms.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="translate">translate</span>
+<h4 class="font-headline font-bold uppercase tracking-widest text-sm">Global Ready</h4>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Multi-language support for international audiences, maintaining regional nuance and cultural context.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="all_inbox">all_inbox</span>
+<h4 class="font-headline font-bold uppercase tracking-widest text-sm">Total Archiving</h4>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Access your refined assets anytime through our permanent, secure cloud infrastructure.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-gradient-to-br from-primary/10 to-transparent rounded-xl border border-primary/5 text-center px-12 overflow-hidden relative">
+<div class="relative z-10 max-w-2xl mx-auto space-y-8">
+<h2 class="text-5xl font-headline font-bold tracking-tighter leading-tight">Ready to amplify your <span class="text-primary italic">Signal?</span></h2>
+<p class="text-on-surface-variant">Stop fighting with transcripts. Start building your legacy.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-12 py-5 bg-primary text-on-primary font-headline font-bold uppercase tracking-widest rounded-md hover:translate-y-[-2px] transition-all">Start Now — $49</button>
+<button class="w-full sm:w-auto px-12 py-5 bg-surface-container-highest border border-primary/20 text-on-surface font-headline font-bold uppercase tracking-widest rounded-md hover:bg-surface-container-high transition-all">Talk to an Architect</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 border-t border-slate-800/30 bg-slate-950">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="space-y-6">
+<div class="text-lg font-bold text-amber-400 font-headline uppercase tracking-tighter">Echoforge</div>
+<p class="text-slate-500 font-body text-sm leading-relaxed">Engineering the future of podcast distribution through precision storytelling and technical excellence.</p>
+</div>
+<div>
+<h5 class="text-amber-400 font-headline font-bold text-xs uppercase tracking-widest mb-6">Explore</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-amber-300 transition-colors font-body text-sm uppercase tracking-widest" href="#">Services</a></li>
+<li><a class="text-slate-500 hover:text-amber-300 transition-colors font-body text-sm uppercase tracking-widest" href="#">Case Studies</a></li>
+<li><a class="text-slate-500 hover:text-amber-300 transition-colors font-body text-sm uppercase tracking-widest" href="#">Audits</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-amber-400 font-headline font-bold text-xs uppercase tracking-widest mb-6">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-amber-300 transition-colors font-body text-sm uppercase tracking-widest" href="#">Privacy</a></li>
+<li><a class="text-slate-500 hover:text-amber-300 transition-colors font-body text-sm uppercase tracking-widest" href="#">Terms</a></li>
+<li><a class="text-slate-500 hover:text-amber-300 transition-colors font-body text-sm uppercase tracking-widest" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-amber-400 font-headline font-bold text-xs uppercase tracking-widest mb-6">Status</h5>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-xs text-slate-500 font-body uppercase tracking-[0.2em]">Systems Online</span>
+</div>
+<p class="text-xs text-slate-600 font-body uppercase tracking-widest">© 2024 Echoforge. Precision in Sound &amp; Strategy.</p>
+</div>
+</div>
+</footer>
+</body></html>

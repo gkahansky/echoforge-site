@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary": "#6a37d4", // Electric Violet
+                "secondary": "#00d2ff", // Cyber Cyan
+                "accent-cyan": "#00d2ff",
+                "on-surface": "#0f172a", // Dark Slate
+                "on-surface-variant": "#475569",
+                "surface": "#ffffff",
+                "surface-container": "#f8fafc",
+                "surface-container-low": "#f1f5f9",
+                "surface-container-highest": "#e2e8f0",
+                "outline-variant": "#cbd5e1"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.5rem",
+                "lg": "0.75rem",
+                "xl": "1rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Space Grotesk", "sans-serif"],
+                "body": ["Inter", "sans-serif"],
+                "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #ffffff;
+            color: #0f172a;
+            font-family: 'Inter', sans-serif;
+        }
+        .space-grotesk { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary/20 selection:text-primary">
+<!-- TopAppBar (COMPONENTS_8) -->
+<header class="bg-white/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0_20px_40px_rgba(106,55,212,0.06)]">
+<nav class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#6a37d4] text-3xl" data-icon="bolt">bolt</span>
+<span class="text-2xl font-bold tracking-tighter text-[#6a37d4] font-['Space_Grotesk'] uppercase">Echoforge</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-['Inter'] text-sm uppercase tracking-widest font-medium">
+<a class="text-slate-600 hover:text-[#006576] transition-colors duration-300" href="#">Services</a>
+<a class="text-[#6a37d4] font-bold border-b-2 border-[#6a37d4] pb-1" href="#">Case Studies</a>
+<a class="text-slate-600 hover:text-[#006576] transition-colors duration-300" href="#">Audits</a>
+<a class="text-slate-600 hover:text-[#006576] transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-[#6a37d4] text-white px-6 py-2 rounded-lg font-bold uppercase tracking-wider text-xs active:scale-95 transition-transform duration-300 shadow-lg shadow-primary/20">
+            Get Started
+        </button>
+</nav>
+</header>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter leading-none mb-6 text-on-surface">
+                Our <span class="text-primary italic">Work.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                Transforming raw audio into strategic movements. We don't just produce podcasts; we engineer audience obsessions.
+            </p>
+</div>
+<div class="flex flex-col items-start gap-2 border-l-2 border-primary/20 pl-6">
+<span class="text-primary font-headline text-4xl font-bold">12M+</span>
+<span class="text-xs uppercase tracking-[0.2em] text-slate-400 font-semibold">Global Impressions Delivered</span>
+</div>
+</section>
+<!-- Featured Case Study -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="relative bg-surface-container-low rounded-xl overflow-hidden min-h-[600px] flex flex-col lg:flex-row shadow-sm border border-outline-variant/30">
+<div class="lg:w-1/2 relative h-[400px] lg:h-auto overflow-hidden">
+<img alt="Podcast Studio" class="absolute inset-0 w-full h-full object-cover" data-alt="Cinematic shot of high-end podcast microphones in a brightly lit modern studio with violet and cyan neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQvCfFNuCvF9TCDsNRPlYlF6lLEtJhPcl6vo4mI6ich54vADHlbRkrjENmGek1dkvCQDLBW0UB1FTAgiBqk0Ee5GnEVsgOZL4FXhiOz3YkRNhQ98zzB9Qhwtnf5YrYAFYOfkpruSpXbG0_8IQvLV6eDX3d_TaobGYFcKXyLjnlWkGc04EPUxuS9ZAPioDJV9nplIq7XjnMHpZyLfxg0wI5fg0zPc_-VbBfdA27R6CensnuyuJMfJ29M-TxmNDyZ9IpRXdXOe396Is"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent lg:bg-gradient-to-r"></div>
+</div>
+<div class="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center">
+<div class="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase tracking-widest font-bold mb-8 rounded-full">
+                    Featured Case Study
+                </div>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-6 tracking-tight text-on-surface">The Growth Factor: Re-Engineering a Tech Titan's Voice</h2>
+<p class="text-on-surface-variant mb-10 leading-relaxed text-lg">
+                    When a Fortune 500 tech firm struggled to resonate with Gen-Z developers, we scrapped their corporate script and built a high-velocity audio brand from the ground up.
+                </p>
+<div class="grid grid-cols-2 gap-8 mb-12">
+<div>
+<p class="text-primary font-headline text-3xl font-bold">300%</p>
+<p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Increase in Reach</p>
+</div>
+<div>
+<p class="text-secondary font-headline text-3xl font-bold">24min</p>
+<p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Average Listen Time</p>
+</div>
+</div>
+<blockquote class="border-l-4 border-secondary pl-6 py-2 mb-8">
+<p class="text-on-surface italic font-medium">"Echoforge didn't just fix our sound; they fixed our strategy. Our brand finally sounds as innovative as our software."</p>
+<cite class="block mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">— Marcus Thorne, Head of DevRel</cite>
+</blockquote>
+</div>
+</div>
+</section>
+<!-- Bento Grid -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Case 1 -->
+<div class="md:col-span-2 bg-surface-container rounded-xl p-8 lg:p-12 relative overflow-hidden flex flex-col justify-between border border-outline-variant/20">
+<div class="z-10">
+<div class="flex items-center gap-2 text-primary mb-4">
+<span class="material-symbols-outlined" data-icon="troubleshoot">troubleshoot</span>
+<span class="text-xs font-bold uppercase tracking-widest">Market Audit</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4 text-on-surface">The Silent Killer: Auditing a Dying Brand</h3>
+<p class="text-on-surface-variant max-w-md">Our deep-dive audit revealed a 40% bounce rate within the first 3 minutes. Our correction strategy restored retention within one quarter.</p>
+</div>
+<div class="mt-12 flex items-baseline gap-4 z-10">
+<span class="text-5xl font-bold font-headline text-primary">82%</span>
+<span class="text-xs uppercase tracking-widest text-slate-400 font-bold max-w-[100px]">Retention Recovery Rate</span>
+</div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+<!-- Case 2 -->
+<div class="bg-surface-container-highest rounded-xl p-8 flex flex-col justify-between aspect-square md:aspect-auto border border-outline-variant/20">
+<div class="relative w-16 h-16 mb-8">
+<img alt="Fintech Logo" class="w-full h-full object-cover rounded-lg filter grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB4XlbWytBvjPWK68lo9WJSrdnA4x9ShZ1Ld-LGFMFddQZxYa7HQb9Bs5VUkQzX3E5V4z13lJFjcTjfzZNNaoYy4CEgTam04mPIXpAmKsGg-77x3kcn_rKU0CU607ycTJM0m6i0eG9LyCeFFs2sYcsJ8j1ffj9zqeX6YG8COv9ZuJCWI1-nkANDFJG2Aa-OlKJsb8TcntDStc69OxKuu3E2TznC21WrTTOKSIMPC5WD6CV8-ndWR9di4XkXHv7u3mdRfR81pAizkc"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold mb-2 uppercase text-on-surface">Vortex Finance</h4>
+<p class="text-sm text-on-surface-variant">Converting dry financial data into a #1 ranked investing podcast in 6 months.</p>
+</div>
+<div class="pt-6 border-t border-outline-variant/30 mt-6">
+<span class="text-2xl font-bold font-headline text-primary">#1</span>
+<span class="text-[10px] uppercase tracking-widest ml-2 text-slate-500 font-bold">Apple Business Chart</span>
+</div>
+</div>
+<!-- Case 3 -->
+<div class="bg-surface-container rounded-xl p-8 flex flex-col justify-between overflow-hidden relative border border-outline-variant/20">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-primary/10 text-8xl" data-icon="waves" data-weight="fill">waves</span>
+</div>
+<div class="z-10">
+<h3 class="font-headline text-2xl font-bold mb-4 uppercase text-on-surface">Sonic Identity: Peak Performance</h3>
+<p class="text-on-surface-variant text-sm mb-6">Custom soundscape design for an extreme sports documentary series.</p>
+</div>
+<div class="z-10">
+<div class="flex -space-x-3 mb-4">
+<img alt="Listener" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYQ_VdKOsKIpfMKfNdzY0RQf225Pd-iDfaIHdDsyWWx93VO2RWOdAIqnmC1oNZG_EqanXtfZH1UWCTmfndCfZL_G3HR_pHb2QDn2N653YpLYAG0CBDgBljqziGuRcgyWx4IyDnM27AbB9yBRMj6tkRLzF_SRNyJg1V-074JJ0frmYYvoCURgqi2XFwiFKXpqOAv5KU-EJ7qI627DRplc1E3sNwgYC25A0Id6_p0yALf3eYd_E2Di-lSa6FLOpxl2s_K_gyDdlTFoU"/>
+<img alt="Listener" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXUpSgDb13QTvp_-mqXKIIbnVOQAUrAepnfMs3q55wbFAwK_d9VTBBHaX-F-xj8h4VD8f3LUGXP52sb-yApzh4boHCgSiirNC7-gsenik_-Ino1ICR28nkzgPzuJDcjRcmkQsbj7Ffn7dXLVM_HObuSeTzMHlBZI6JqiEreqEWMEnGlgKXKsB-SfeyxEgpuJ7nmVpeYJEwV1PAh-q0oemw863ZWF82tDl9VnPtdcHz6wz533a1yx9XYWBQ-qMIx6n3c-N-QJzM9PM"/>
+<img alt="Listener" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzG8Ff00J0b5qVVSG8i2onkd0_HlCvYXRymss9LBZW64xWnd02XLzsGBm7vqgmIpD7r0Wl5pTn2Np3210JpnRlyrDIs5jVDAbjc5SBpvxNdwD7R3B_0yLZ5ytg_qIvSciNoExb07LdlfipgLHVa29Csiv0gvygEdHtm4FVY9PGMAzavYsmeLkc16xkpNYJUczlmpWHLzxhv3GoRyxpaXWFsIOgv8ynWPxa_oLrbiwMelKxQ8hVgEoxM5MDPxsXlOrw69FkNr4DLks"/>
+</div>
+<p class="text-xs text-slate-400 uppercase tracking-widest font-bold">500K+ New Listeners</p>
+</div>
+</div>
+<!-- Case 4 -->
+<div class="md:col-span-2 bg-gradient-to-br from-surface-container-low to-surface-container rounded-xl p-8 lg:p-12 border border-primary/10">
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="lg:w-1/3">
+<div class="h-64 w-full bg-slate-100 rounded-xl relative overflow-hidden flex items-center justify-center border border-outline-variant/30">
+<div class="flex items-end gap-1.5">
+<div class="w-2.5 h-12 bg-primary rounded-full"></div>
+<div class="w-2.5 h-20 bg-secondary rounded-full"></div>
+<div class="w-2.5 h-8 bg-primary rounded-full"></div>
+<div class="w-2.5 h-24 bg-secondary rounded-full"></div>
+<div class="w-2.5 h-16 bg-primary rounded-full"></div>
+<div class="w-2.5 h-28 bg-secondary rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="lg:w-2/3">
+<h3 class="font-headline text-3xl font-bold mb-4 text-on-surface">Precision Auditing for Scale</h3>
+<p class="text-on-surface-variant mb-8 leading-relaxed">Our proprietary 50-point Audit framework identifies technical friction, narrative gaps, and monetization leakage that standard agencies miss.</p>
+<button class="text-primary font-bold uppercase tracking-[0.2em] text-xs flex items-center gap-2 hover:gap-4 transition-all duration-300">
+                            View Audit Methodology <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Quote Section -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="text-center py-20 border-y border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-5xl mb-8" data-icon="format_quote" data-weight="fill">format_quote</span>
+<h2 class="font-headline text-3xl md:text-5xl font-medium italic leading-tight text-on-surface mb-8">
+                "They don't just record audio. They build worlds. Echoforge turned our internal knowledge into an industry-leading movement."
+            </h2>
+<div class="flex items-center justify-center gap-4">
+<div class="text-center">
+<span class="block font-bold text-sm uppercase tracking-widest text-on-surface">Sarah Jenkins</span>
+<span class="block text-xs text-slate-500 uppercase tracking-widest font-semibold mt-1">CMO, Nebula Systems</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-8">
+<div class="bg-primary text-white rounded-[2rem] p-12 lg:p-24 text-center relative overflow-hidden shadow-2xl shadow-primary/20">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter mb-8 relative z-10">Ready for your transformation?</h2>
+<p class="text-xl md:text-2xl font-medium mb-12 max-w-2xl mx-auto relative z-10 opacity-90">
+                Join the ranks of high-impact podcasts that lead their industries. Let's audit your potential.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+<button class="bg-white text-primary px-10 py-5 rounded-xl font-bold uppercase tracking-[0.2em] text-sm hover:bg-secondary hover:text-white transition-all duration-300 shadow-xl">Start Audit</button>
+<button class="bg-transparent border-2 border-white/40 text-white px-10 py-5 rounded-xl font-bold uppercase tracking-[0.2em] text-sm hover:bg-white/10 transition-all">Contact Us</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (COMPONENTS_8) -->
+<footer class="bg-[#f5f7f9] w-full rounded-t-[2rem] mt-24">
+<div class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="flex flex-col gap-6">
+<div class="text-lg font-bold text-[#6a37d4] uppercase font-['Space_Grotesk'] tracking-tight">Echoforge</div>
+<p class="text-slate-500 text-sm leading-relaxed font-['Inter']">Precision in Sound &amp; Strategy. We engineer the future of audio storytelling.</p>
+</div>
+<div>
+<h4 class="text-[#0F172A] font-['Inter'] text-sm uppercase tracking-widest font-semibold mb-6">Services</h4>
+<ul class="flex flex-col gap-4 text-slate-500 text-sm uppercase tracking-widest font-semibold">
+<li><a class="hover:translate-x-1 transition-transform duration-200 block" href="#">Production</a></li>
+<li><a class="hover:translate-x-1 transition-transform duration-200 block" href="#">Growth Audits</a></li>
+<li><a class="hover:translate-x-1 transition-transform duration-200 block" href="#">Sonic Branding</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#0F172A] font-['Inter'] text-sm uppercase tracking-widest font-semibold mb-6">Company</h4>
+<ul class="flex flex-col gap-4 text-sm uppercase tracking-widest font-semibold">
+<li><a class="text-[#6a37d4] underline decoration-2 underline-offset-4" href="#">Case Studies</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 hover:translate-x-1 transition-transform duration-200 block" href="#">Our Team</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 hover:translate-x-1 transition-transform duration-200 block" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#0F172A] font-['Inter'] text-sm uppercase tracking-widest font-semibold mb-6">Legal</h4>
+<ul class="flex flex-col gap-4 text-slate-500 text-sm uppercase tracking-widest font-semibold">
+<li><a class="hover:translate-x-1 transition-transform duration-200 block" href="#">Privacy</a></li>
+<li><a class="hover:translate-x-1 transition-transform duration-200 block" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 pb-12 pt-8 border-t border-slate-200">
+<p class="text-slate-400 text-[10px] uppercase tracking-[0.3em] font-semibold">© 2024 ECHOFORGE. Precision in Motion.</p>
+</div>
+</footer>
+</body></html>

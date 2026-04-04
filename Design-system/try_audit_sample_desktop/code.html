@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EchoForge | Request Your AI-Powered Audit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#ffb95f",
+                    "on-surface": "#dae2fd",
+                    "surface-container-lowest": "#060e20",
+                    "surface-container-low": "#131b2e",
+                    "on-secondary-fixed": "#002113",
+                    "on-primary-fixed": "#001e2f",
+                    "on-background": "#dae2fd",
+                    "primary-container": "#0ea5e9",
+                    "inverse-primary": "#006591",
+                    "inverse-on-surface": "#283044",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#89ceff",
+                    "surface-container-highest": "#2d3449",
+                    "on-primary-container": "#003751",
+                    "surface-container-high": "#222a3d",
+                    "primary-fixed-dim": "#89ceff",
+                    "tertiary-fixed": "#ffddb8",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-tertiary": "#472a00",
+                    "on-secondary": "#003824",
+                    "secondary-fixed-dim": "#4edea3",
+                    "secondary-container": "#00a572",
+                    "surface": "#0b1326",
+                    "primary-fixed": "#c9e6ff",
+                    "inverse-surface": "#dae2fd",
+                    "on-tertiary-fixed": "#2a1700",
+                    "tertiary-container": "#d88a00",
+                    "on-error-container": "#ffdad6",
+                    "error-container": "#93000a",
+                    "surface-variant": "#2d3449",
+                    "on-error": "#690005",
+                    "background": "#0b1326",
+                    "surface-dim": "#0b1326",
+                    "outline-variant": "#3e4850",
+                    "on-secondary-container": "#00311f",
+                    "on-surface-variant": "#bec8d2",
+                    "surface-container": "#171f33",
+                    "primary": "#89ceff",
+                    "on-secondary-fixed-variant": "#005236",
+                    "on-tertiary-container": "#4a2c00",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "secondary": "#4edea3",
+                    "outline": "#88929b",
+                    "on-primary": "#00344d",
+                    "surface-bright": "#31394d",
+                    "secondary-fixed": "#6ffbbe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .forge-bloom {
+            box-shadow: 0 0 15px rgba(78, 222, 163, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar (Shared Component) -->
+<header class="w-full sticky top-0 z-50 bg-slate-950/70 backdrop-blur-md shadow-2xl shadow-sky-900/10">
+<nav class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+<div class="text-2xl font-bold tracking-tighter text-white font-headline">EchoForge</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-400 font-medium hover:text-emerald-400 transition-colors duration-300 font-['Space_Grotesk'] tracking-tight" href="#">Homepage</a>
+<a class="text-slate-400 font-medium hover:text-emerald-400 transition-colors duration-300 font-['Space_Grotesk'] tracking-tight" href="#">Services</a>
+<a class="text-slate-400 font-medium hover:text-emerald-400 transition-colors duration-300 font-['Space_Grotesk'] tracking-tight" href="#">Podcast</a>
+<a class="text-slate-400 font-medium hover:text-emerald-400 transition-colors duration-300 font-['Space_Grotesk'] tracking-tight" href="#">Portfolio</a>
+<a class="text-slate-400 font-medium hover:text-emerald-400 transition-colors duration-300 font-['Space_Grotesk'] tracking-tight" href="#">Pricing</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-headline font-bold px-6 py-2 rounded transition-transform duration-200 active:scale-95">
+                Request Sample
+            </button>
+</nav>
+</header>
+<main class="min-h-[calc(100vh-80px)] flex flex-col items-center">
+<!-- Hero Section -->
+<section class="w-full max-w-7xl mx-auto px-8 pt-24 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-highest rounded-full mb-8 border border-outline-variant/10">
+<span class="w-2 h-2 rounded-full bg-secondary forge-bloom"></span>
+<span class="text-[10px] font-headline font-bold uppercase tracking-[0.15em] text-secondary">Live Audit Forge</span>
+</div>
+<h1 class="text-6xl md:text-7xl font-headline font-bold leading-[1.05] tracking-tight text-white mb-8">
+                    Real analysis on your site, <span class="text-primary italic">not a generic checklist.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed mb-12">
+                    Experience the precision of EchoForge. Our AI-driven audits identify architectural flaws and conversion leaks that standard tools miss.
+                </p>
+<div class="grid grid-cols-2 gap-8 py-8 border-t border-outline-variant/10">
+<div>
+<span class="material-symbols-outlined text-tertiary mb-2" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<h3 class="font-headline font-bold text-white mb-1">Human-Verified</h3>
+<p class="text-sm text-on-surface-variant">Our engineers review every automated finding for maximum accuracy.</p>
+</div>
+<div>
+<span class="material-symbols-outlined text-secondary mb-2" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h3 class="font-headline font-bold text-white mb-1">24-Hour Turnaround</h3>
+<p class="text-sm text-on-surface-variant">Receive your comprehensive technical report in less than one business day.</p>
+</div>
+</div>
+</div>
+<!-- Form Container -->
+<div class="lg:col-span-5">
+<div class="bg-surface-container p-8 md:p-12 rounded-xl shadow-2xl relative overflow-hidden">
+<!-- Subtle background light effect -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
+<div class="relative z-10">
+<h2 class="text-3xl font-headline font-bold text-white mb-2">Start Your Audit</h2>
+<p class="text-on-surface-variant mb-8">No credit card required. Pure technical insight.</p>
+<form class="space-y-6">
+<div class="space-y-1">
+<label class="text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant ml-1">Website URL</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-0 text-white p-4 rounded-lg border-b-2 border-transparent focus:border-tertiary transition-all placeholder:text-outline/50" placeholder="https://yourwebsite.com" type="url"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant ml-1">Business Email</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-0 text-white p-4 rounded-lg border-b-2 border-transparent focus:border-tertiary transition-all placeholder:text-outline/50" placeholder="name@company.com" type="email"/>
+</div>
+<button class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold text-lg rounded-lg shadow-lg hover:brightness-110 transition-all active:scale-[0.98]" type="submit">
+                                Analyze My Website
+                            </button>
+</form>
+<div class="mt-8 pt-8 border-t border-outline-variant/10 flex items-center justify-center gap-4 text-xs font-headline font-medium tracking-tight text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Secure Processing</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">credit_card_off</span>
+<span>No CC Required</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Showcase Section -->
+<section class="w-full bg-surface-container-low py-24 mt-12">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="text-4xl font-headline font-bold text-white mb-4">Deep Forge Capability</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="md:col-span-2 bg-surface p-10 rounded-xl flex flex-col justify-between group hover:bg-surface-bright transition-colors duration-300">
+<div>
+<span class="text-tertiary font-headline font-bold tracking-tighter text-5xl mb-6 block">01</span>
+<h3 class="text-2xl font-headline font-bold text-white mb-4">Architectural Integrity Audit</h3>
+<p class="text-on-surface-variant leading-relaxed text-lg">We dive into your DOM structure, rendering cycles, and core web vitals to ensure your foundations are stable for scaling.</p>
+</div>
+<div class="mt-8 flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded text-[10px] font-headline font-bold uppercase tracking-wider text-primary">React</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-[10px] font-headline font-bold uppercase tracking-wider text-primary">Next.js</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-[10px] font-headline font-bold uppercase tracking-wider text-primary">Webflow</span>
+</div>
+</div>
+<!-- Card 2 (Image/Visual) -->
+<div class="bg-surface-container-high rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-500" data-alt="abstract high-tech data visualization with glowing blue lines and digital code elements over dark blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZd2eklAXDxxpDiG7Or6mxk3kTxr7hiSN1MoG99Dly08zcdLw2trBICQhNZt33bujt0GMtcOoFlWYeKj0JVYe4aslIp9XdfYkwfS8MEeA2e4NOBq4ZXQqNsSFzY0Mph0TuiQp5sbvfaTU0-79ZfeoEOkW4upr-rUpHXgK_dUtXc5tLyIgXngEFMe0883pma7EQ2oGvyxHW-Gp-hSARBolcAEvrFlGGoM3qTDyv1vVbjevXJa5JaEXNMRtvMKIrtI3IsAksxBdBlLs"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+<h3 class="text-xl font-headline font-bold text-white mb-2">Performance Analytics</h3>
+<p class="text-sm text-on-surface-variant">Real-time throughput metrics.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface p-10 rounded-xl group hover:bg-surface-bright transition-colors duration-300">
+<span class="text-secondary font-headline font-bold tracking-tighter text-5xl mb-6 block">02</span>
+<h3 class="text-2xl font-headline font-bold text-white mb-4">UX Friction Heatmap</h3>
+<p class="text-on-surface-variant leading-relaxed">Identifying where users drop off using advanced behavioral AI models.</p>
+</div>
+<!-- Card 4 -->
+<div class="md:col-span-2 bg-gradient-to-br from-surface-container-high to-surface-container-highest p-10 rounded-xl flex items-center justify-between">
+<div class="max-w-md">
+<h3 class="text-2xl font-headline font-bold text-white mb-4">Ready to Forge Ahead?</h3>
+<p class="text-on-surface-variant mb-6">Join 400+ technical teams who have optimized their stack with EchoForge.</p>
+<a class="inline-flex items-center gap-2 text-primary font-headline font-bold hover:gap-4 transition-all" href="#top">
+                                Jump to Top <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="hidden lg:block w-32 h-32 rounded-full border-4 border-outline-variant/20 border-t-primary animate-spin-slow"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-slate-950 border-t border-slate-800/30">
+<div class="max-w-7xl mx-auto px-12 py-16 grid grid-cols-4 gap-12 font-['Manrope'] text-sm">
+<div class="col-span-4 lg:col-span-1">
+<div class="text-xl font-bold text-white mb-4">EchoForge</div>
+<p class="text-slate-500 mb-6">Technical precision for the modern digital landscape. Crafting excellence through AI integration.</p>
+</div>
+<div>
+<h4 class="text-emerald-500 font-bold mb-6 uppercase tracking-widest text-[10px]">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">AI Ethics</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-emerald-500 font-bold mb-6 uppercase tracking-widest text-[10px]">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">Contact Support</a></li>
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">Twitter</a></li>
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">LinkedIn</a></li>
+</ul>
+</div>
+<div class="col-span-4 lg:col-span-1 flex flex-col justify-between">
+<div>
+<h4 class="text-emerald-500 font-bold mb-6 uppercase tracking-widest text-[10px]">System Status</h4>
+<div class="flex items-center gap-2 px-3 py-2 bg-slate-900 rounded-lg">
+<span class="w-2 h-2 rounded-full bg-secondary forge-bloom animate-pulse"></span>
+<span class="text-xs text-on-surface font-medium">All Forges Operational</span>
+</div>
+</div>
+<div class="text-slate-500 text-xs mt-8 lg:mt-0">
+                    © 2024 EchoForge AI. Forged with precision.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>

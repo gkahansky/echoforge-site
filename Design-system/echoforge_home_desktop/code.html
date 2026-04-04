@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EchoForge | Forging Raw Content into Growth Engines</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#ffb95f",
+                    "on-surface": "#dae2fd",
+                    "surface-container-lowest": "#060e20",
+                    "surface-container-low": "#131b2e",
+                    "on-secondary-fixed": "#002113",
+                    "on-primary-fixed": "#001e2f",
+                    "on-background": "#dae2fd",
+                    "primary-container": "#0ea5e9",
+                    "inverse-primary": "#006591",
+                    "inverse-on-surface": "#283044",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#89ceff",
+                    "surface-container-highest": "#2d3449",
+                    "on-primary-container": "#003751",
+                    "surface-container-high": "#222a3d",
+                    "primary-fixed-dim": "#89ceff",
+                    "tertiary-fixed": "#ffddb8",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-tertiary": "#472a00",
+                    "on-secondary": "#003824",
+                    "secondary-fixed-dim": "#4edea3",
+                    "secondary-container": "#00a572",
+                    "surface": "#0b1326",
+                    "primary-fixed": "#c9e6ff",
+                    "inverse-surface": "#dae2fd",
+                    "on-tertiary-fixed": "#2a1700",
+                    "tertiary-container": "#d88a00",
+                    "on-error-container": "#ffdad6",
+                    "error-container": "#93000a",
+                    "surface-variant": "#2d3449",
+                    "on-error": "#690005",
+                    "background": "#0b1326",
+                    "surface-dim": "#0b1326",
+                    "outline-variant": "#3e4850",
+                    "on-secondary-container": "#00311f",
+                    "on-surface-variant": "#bec8d2",
+                    "surface-container": "#171f33",
+                    "primary": "#89ceff",
+                    "on-secondary-fixed-variant": "#005236",
+                    "on-tertiary-container": "#4a2c00",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "secondary": "#4edea3",
+                    "outline": "#88929b",
+                    "on-primary": "#00344d",
+                    "surface-bright": "#31394d",
+                    "secondary-fixed": "#6ffbbe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .forge-bloom {
+            box-shadow: 0 0 15px rgba(78, 222, 163, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-slate-950/70 backdrop-blur-md shadow-2xl shadow-sky-900/10">
+<nav class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+<div class="text-2xl font-bold tracking-tighter text-white font-headline">EchoForge</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sky-400 border-b-2 border-sky-500 pb-1 font-headline tracking-tight" href="#">Homepage</a>
+<a class="text-slate-400 font-medium hover:text-emerald-400 transition-colors duration-300 font-headline tracking-tight" href="#">Services</a>
+<a class="text-slate-400 font-medium hover:text-emerald-400 transition-colors duration-300 font-headline tracking-tight" href="#">Podcast</a>
+<a class="text-slate-400 font-medium hover:text-emerald-400 transition-colors duration-300 font-headline tracking-tight" href="#">Portfolio</a>
+<a class="text-slate-400 font-medium hover:text-emerald-400 transition-colors duration-300 font-headline tracking-tight" href="#">Pricing</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-6 py-2.5 rounded font-medium hover:opacity-90 active:scale-95 duration-200 ease-out font-headline">
+                Request Sample
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-surface via-surface-container-low to-surface-container-lowest opacity-90"></div>
+<img class="w-full h-full object-cover mix-blend-overlay" data-alt="Cinematic close-up of futuristic motherboard with glowing blue and green data streams in a dark technical environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdKZX9MNpo0YB_H3kYMiTaoKpR4FXOCMMsY40WuGBYJM3SBludIqsLYQAShmjvcpdibrJMxnUm7u1vM2a1i8g1RIAuBpqIG2eCGFHQfjU7fqwg86mYbHn_hdglUGFo-fXw4TzDbQfM9XLnm3dlRQrXHSXRCh5A-NXcW7-H-cmXZeqOhuH9c4DZd_1I-7QJeYhIDDvI4M5KLsMkoLPYiO4Tu6YEPjvcgg-d5BOFGyEQjOq_r1YnnhsHGEVCfY-8G3t6NoPlX1Y36Ak"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 border border-secondary/20 rounded-full mb-6 forge-bloom">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-[11px] font-label font-bold tracking-widest text-secondary uppercase">Live Forge Status: Active</span>
+</div>
+<h1 class="text-7xl lg:text-8xl font-headline font-bold text-white tracking-tighter leading-[0.9] mb-8">
+                        Forging Raw Content <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Into Growth Engines.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl font-light leading-relaxed mb-10">
+                        We transform your raw audio and fragmented ideas into high-performance marketing machines. Precision-engineered content for the technical elite.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-bold rounded-lg hover:opacity-90 transition-all">Start Your Engine</button>
+<button class="px-8 py-4 bg-transparent border border-outline-variant/30 text-white font-bold rounded-lg hover:bg-white/5 transition-all">View Process</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section: Bento Grid Layout -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="font-label text-xs tracking-widest text-primary uppercase mb-2 block">Our Expertise</span>
+<h2 class="text-4xl font-headline font-bold text-white">Bespoke Forge Services</h2>
+</div>
+<p class="text-on-surface-variant max-w-md text-right">Hyper-specialized solutions designed for high-stakes creators and tech-driven marketing teams.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Podcast Studio -->
+<div class="md:col-span-7 bg-surface-container-high rounded-xl p-8 group hover:bg-surface-container-highest transition-all duration-300">
+<div class="flex justify-between items-start mb-12">
+<div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">mic_external_on</span>
+</div>
+<span class="font-label text-[10px] tracking-widest text-on-surface-variant bg-surface/40 px-2 py-1 rounded">SERVICE_01</span>
+</div>
+<h3 class="text-3xl font-headline font-bold text-white mb-4">Podcast Studio</h3>
+<p class="text-on-surface-variant mb-8 max-w-md">End-to-end production for technical podcasts. We handle the noise so you can focus on the signal. Sound engineering, guest management, and cinematic editing.</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Spatial Audio Mastering
+                            </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                AI-Driven Show Notes &amp; Transcripts
+                            </li>
+</ul>
+<a class="inline-flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all" href="#">
+                            Configure Studio <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Marketing Audit -->
+<div class="md:col-span-5 bg-surface-container-low border border-outline-variant/10 rounded-xl p-8 relative overflow-hidden group">
+<div class="relative z-10">
+<div class="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-12">
+<span class="material-symbols-outlined text-secondary text-3xl">query_stats</span>
+</div>
+<h3 class="text-3xl font-headline font-bold text-white mb-4">Marketing Audit</h3>
+<p class="text-on-surface-variant mb-8">A ruthless analysis of your current content ecosystem. We identify leaks and engineer high-conversion funnels.</p>
+<button class="w-full py-4 bg-white/5 border border-white/10 text-white font-bold rounded hover:bg-secondary hover:text-on-secondary transition-all">Request Audit</button>
+</div>
+<!-- Background Accent -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-all"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 24h Pipeline Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="text-5xl font-headline font-bold text-white tracking-tight mb-4">The 24h Pipeline</h2>
+<p class="text-on-surface-variant">From raw data to refined asset in a single rotation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 relative">
+<!-- Connection Line -->
+<div class="hidden md:block absolute top-12 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent"></div>
+<div class="flex flex-col items-center text-center px-10 relative">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-8 border border-outline-variant/20 relative z-10">
+<span class="material-symbols-outlined text-4xl text-primary">cloud_upload</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-white mb-3">01. Upload</h4>
+<p class="text-sm text-on-surface-variant">Drop your raw audio or brief into our encrypted Forge Portal.</p>
+</div>
+<div class="flex flex-col items-center text-center px-10 relative">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-8 border border-outline-variant/20 relative z-10">
+<span class="material-symbols-outlined text-4xl text-secondary">memory</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-white mb-3">02. AI Processing</h4>
+<p class="text-sm text-on-surface-variant">Our hybrid engine of AI and human curators refine the core signal.</p>
+</div>
+<div class="flex flex-col items-center text-center px-10 relative">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-8 border border-outline-variant/20 relative z-10">
+<span class="material-symbols-outlined text-4xl text-tertiary">package_2</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-white mb-3">03. Receive</h4>
+<p class="text-sm text-on-surface-variant">Download your engine-ready assets, ready for immediate deployment.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Tiers -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex items-center gap-6 mb-16">
+<h2 class="text-4xl font-headline font-bold text-white whitespace-nowrap">Forging Tiers</h2>
+<div class="h-[1px] w-full bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Studio Pricing -->
+<div class="bg-surface-container p-10 rounded-2xl border-b-2 border-primary">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="text-2xl font-headline font-bold text-white mb-2">Podcast Engine</h3>
+<p class="text-on-surface-variant text-sm">Subscription production for weekly shows.</p>
+</div>
+<div class="text-right">
+<span class="text-4xl font-bold text-primary">$1,200</span>
+<span class="text-xs block text-on-surface-variant uppercase tracking-widest mt-1">/ month</span>
+</div>
+</div>
+<div class="space-y-4 mb-10">
+<div class="flex items-center justify-between py-3 border-b border-outline-variant/10">
+<span class="text-on-surface/80 text-sm">Episodes per Month</span>
+<span class="text-white font-medium">4 Episodes</span>
+</div>
+<div class="flex items-center justify-between py-3 border-b border-outline-variant/10">
+<span class="text-on-surface/80 text-sm">Turnaround Time</span>
+<span class="text-white font-medium">48 Hours</span>
+</div>
+<div class="flex items-center justify-between py-3 border-b border-outline-variant/10">
+<span class="text-on-surface/80 text-sm">Show Notes &amp; Clips</span>
+<span class="text-secondary">Included</span>
+</div>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-lg hover:opacity-90 transition-all">Initiate Subscription</button>
+</div>
+<!-- Audit Pricing -->
+<div class="bg-surface-container p-10 rounded-2xl border-b-2 border-secondary">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="text-2xl font-headline font-bold text-white mb-2">Full Growth Audit</h3>
+<p class="text-on-surface-variant text-sm">One-time deep dive into your strategy.</p>
+</div>
+<div class="text-right">
+<span class="text-4xl font-bold text-secondary">$3,500</span>
+<span class="text-xs block text-on-surface-variant uppercase tracking-widest mt-1">One-Time</span>
+</div>
+</div>
+<div class="space-y-4 mb-10">
+<div class="flex items-center justify-between py-3 border-b border-outline-variant/10">
+<span class="text-on-surface/80 text-sm">Competitor Benchmarking</span>
+<span class="text-white font-medium">Top 5 Rivals</span>
+</div>
+<div class="flex items-center justify-between py-3 border-b border-outline-variant/10">
+<span class="text-on-surface/80 text-sm">Funnel Mapping</span>
+<span class="text-white font-medium">3 Core Paths</span>
+</div>
+<div class="flex items-center justify-between py-3 border-b border-outline-variant/10">
+<span class="text-on-surface/80 text-sm">Strategy Workshop</span>
+<span class="text-white font-medium">90 Minutes</span>
+</div>
+</div>
+<button class="w-full py-4 bg-secondary text-on-secondary font-bold rounded-lg hover:opacity-90 transition-all">Book Audit Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline font-bold text-white">What Creators Say</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-high p-8 rounded-xl italic text-on-surface-variant leading-relaxed relative">
+<span class="material-symbols-outlined absolute -top-4 -left-4 text-5xl text-primary/20" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+                        "EchoForge turned my messy interview recordings into a top-10 tech podcast. Their engineering-first approach is exactly what we needed."
+                        <div class="mt-8 flex items-center gap-4 not-italic">
+<div class="w-10 h-10 rounded-full bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional headshot of a tech entrepreneur in a modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbaPmP2I4xORGkc_HOcYKb_upZjjzz9Ytp1ckaPUJ9tf57M2rQ1gYj0AeQ_AoS-v12K8LOT7EPZuHH-MUM0_A1RBqISPz4mwGxvsBqW_GVKRoredQkPp1kuXeWnqd-l3j9Z4hXeZGFMR4Y_l-nuDl96CICTlQeEHxmqqMFxFjo5aevdbAatEkQqTY7htMJgzsV95unvs6FbOVwUAi4ZhuuuPduHDeOjkLA3erbsY2oRSo5wlcRW_5vmVpGIGtwtzt3W8wDv2LLPfQ"/>
+</div>
+<div>
+<p class="text-white font-bold text-sm">Marcus Chen</p>
+<p class="text-[10px] font-label text-primary uppercase">Founder, DevStream</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-8 rounded-xl italic text-on-surface-variant leading-relaxed relative">
+<span class="material-symbols-outlined absolute -top-4 -left-4 text-5xl text-secondary/20" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+                        "The Marketing Audit was a revelation. We were wasting 40% of our budget on dead-end content. The Forge fixed our funnel in weeks."
+                        <div class="mt-8 flex items-center gap-4 not-italic">
+<div class="w-10 h-10 rounded-full bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a female marketing executive with a friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBseCdprOFw1unDiFWpcqaTTfMUprLUJwzfSF9LknaYG-ZJrmOfKSuhjCeURZo44QFdDjDxFzLxn8DxCBUFYDYaPNukqlb6NVoOZ9pYKfcDdC6KHdiV1dX_dY4XaYDuMEOpbJtYB8yVmtR-mTUx_vGJGv96_OCa8gzEhTS7cztEwFhRxLGv3o2lHuTWmxeJ-Z3ygnDcKTmQJZJF72BDNL0Vz8y4ko6v8gDb3XeUxohab4t146oKY5UwzEVrsDEsY69Yg9-O5lbU7sE"/>
+</div>
+<div>
+<p class="text-white font-bold text-sm">Sarah Jenkins</p>
+<p class="text-[10px] font-label text-secondary uppercase">CMO, Fintech Global</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-8 rounded-xl italic text-on-surface-variant leading-relaxed relative">
+<span class="material-symbols-outlined absolute -top-4 -left-4 text-5xl text-tertiary/20" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+                        "Clean, precise, and professional. Dealing with EchoForge feels more like working with an engineering firm than a creative agency."
+                        <div class="mt-8 flex items-center gap-4 not-italic">
+<div class="w-10 h-10 rounded-full bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young man with glasses looking confident, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlQnEFXhQ33HQ8wHvFJQ-hCc2MV0_830YyIqKbaqXzryW5ilnCmTUWtGSHbPsEPZOCPNDzBB8W2cfauIlJWbGBOJDWUrZFSrJ2dbqX9qAc34alTofnf9qLQjog2eUfE150BA24772PE4qqIMZ42iQ6Sqe89tDUIeT9xxVTo97hv_DCvWsy9XgaXhHdICB8ThmMMa7wNcAqdWGOGDUFO-nCIZkYYXgC-lVHC35jx3oySomRuP8_QgHtkzcKoOtvn87ShPB8nakN6AQ"/>
+</div>
+<div>
+<p class="text-white font-bold text-sm">Alex Rivera</p>
+<p class="text-[10px] font-label text-tertiary uppercase">Host, The Code Lab</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-800/30 bg-slate-950 font-['Manrope'] text-sm">
+<div class="max-w-7xl mx-auto px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1">
+<div class="text-xl font-bold text-white mb-4">EchoForge</div>
+<p class="text-slate-500 mb-6">Forging raw content into growth engines with technical precision and editorial soul.</p>
+<p class="text-slate-500">© 2024 EchoForge AI. Forged with precision.</p>
+</div>
+<div>
+<h5 class="text-emerald-500 font-bold mb-6">Services</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">Podcast Studio</a></li>
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">Marketing Audit</a></li>
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">AI Ethics</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-emerald-500 font-bold mb-6">Company</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">Contact Support</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-emerald-500 font-bold mb-6">Connect</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">Twitter</a></li>
+<li><a class="text-slate-500 hover:text-sky-400 transition-all opacity-80 hover:opacity-100" href="#">LinkedIn</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

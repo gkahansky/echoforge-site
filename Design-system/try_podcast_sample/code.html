@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Try Podcast Sample | EchoForge AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#00311f",
+                        "on-surface": "#dae2fd",
+                        "on-background": "#dae2fd",
+                        "surface-container-highest": "#2d3449",
+                        "outline-variant": "#3e4850",
+                        "secondary": "#4edea3",
+                        "surface-bright": "#31394d",
+                        "primary-fixed": "#c9e6ff",
+                        "on-secondary-fixed-variant": "#005236",
+                        "inverse-on-surface": "#283044",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#d88a00",
+                        "surface-tint": "#89ceff",
+                        "error-container": "#93000a",
+                        "surface": "#0b1326",
+                        "on-primary-fixed": "#001e2f",
+                        "on-surface-variant": "#bec8d2",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-secondary": "#003824",
+                        "on-primary-container": "#003751",
+                        "primary": "#89ceff",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "surface-dim": "#0b1326",
+                        "primary-fixed-dim": "#89ceff",
+                        "on-tertiary-fixed": "#2a1700",
+                        "inverse-primary": "#006591",
+                        "surface-container-high": "#222a3d",
+                        "secondary-fixed-dim": "#4edea3",
+                        "inverse-surface": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-secondary-fixed": "#002113",
+                        "primary-container": "#0ea5e9",
+                        "on-primary": "#00344d",
+                        "tertiary": "#ffb95f",
+                        "background": "#0b1326",
+                        "on-error": "#690005",
+                        "surface-container-low": "#131b2e",
+                        "tertiary-fixed": "#ffddb8",
+                        "surface-variant": "#2d3449",
+                        "outline": "#88929b",
+                        "surface-container": "#171f33",
+                        "on-tertiary": "#472a00",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "secondary-container": "#00a572",
+                        "surface-container-lowest": "#060e20",
+                        "on-tertiary-container": "#4a2c00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .forge-bloom {
+            box-shadow: 0 0 15px rgba(78, 222, 163, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0b1326]/70 backdrop-blur-md shadow-[0_16px_32px_rgba(14,165,233,0.08)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold font-space-grotesk text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-[#0EA5E9]" data-icon="graphic_eq">graphic_eq</span>
+<span class="tracking-tight">EchoForge</span>
+</div>
+<button class="text-xs font-medium font-space-grotesk uppercase tracking-widest text-[#0EA5E9] border border-[#0EA5E9]/20 px-4 py-2 rounded-lg hover:bg-sky-500/10 transition-all active:scale-95">
+                Get Started
+            </button>
+</div>
+</header>
+<main class="pt-24 pb-12 px-6 max-w-lg mx-auto">
+<!-- Hero Section -->
+<section class="mb-10 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 forge-bloom">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-[10px] font-label font-bold uppercase tracking-widest text-secondary">Forge Live Now</span>
+</div>
+<h1 class="text-4xl font-headline font-bold tracking-tight text-white mb-3">Real output, not a demo.</h1>
+<p class="text-on-surface-variant font-body leading-relaxed">
+                Experience the precision of EchoForge. Get your watermarked sample in 5-10 minutes. No credit card required.
+            </p>
+</section>
+<!-- Form Container -->
+<div class="bg-surface-container rounded-[32px] p-6 shadow-2xl relative overflow-hidden border border-outline-variant/10">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<form class="space-y-8 relative z-10">
+<!-- Upload Area -->
+<div class="space-y-3">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary block">1. Upload Source</label>
+<div class="group relative flex flex-col items-center justify-center border-2 border-dashed border-outline-variant/30 rounded-2xl p-8 bg-surface-container-lowest transition-all hover:border-primary/50">
+<input accept=".mp3,.mp4,.m4a,.wav,.webm" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" type="file"/>
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<p class="text-sm font-medium text-white mb-1">Tap to select or drag file</p>
+<p class="text-xs text-on-surface-variant">mp3, mp4, wav, m4a (Max 200MB)</p>
+</div>
+<!-- Mock Upload Progress -->
+<div class="bg-surface-container-high rounded-xl p-4 border border-outline-variant/10">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-medium text-on-surface-variant truncate max-w-[150px]">episode_raw_v1.mp4</span>
+<span class="text-xs font-bold text-primary">64%</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[64%]"></div>
+</div>
+</div>
+</div>
+<!-- Personal Info -->
+<div class="space-y-3">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary block">2. Delivery Details</label>
+<div class="space-y-4">
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-4 px-0 focus:ring-0 focus:border-tertiary transition-all text-white placeholder:text-on-surface-variant/50" placeholder="Your Email Address" type="email"/>
+</div>
+</div>
+</div>
+<!-- Optional Context -->
+<div class="space-y-3">
+<button class="flex items-center gap-2 text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant hover:text-white transition-colors" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="add_circle">add_circle</span>
+                        Add optional podcast metadata
+                    </button>
+<div class="grid grid-cols-1 gap-4 mt-2">
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-3 px-0 focus:ring-0 focus:border-tertiary transition-all text-sm text-white placeholder:text-on-surface-variant/40" placeholder="Show Name" type="text"/>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-3 px-0 focus:ring-0 focus:border-tertiary transition-all text-sm text-white placeholder:text-on-surface-variant/40" placeholder="Episode Title" type="text"/>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-3 px-0 focus:ring-0 focus:border-tertiary transition-all text-sm text-white placeholder:text-on-surface-variant/40" placeholder="Host Name" type="text"/>
+</div>
+</div>
+<!-- CTA -->
+<div class="pt-4">
+<button class="w-full py-5 rounded-2xl bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold text-lg shadow-lg active:scale-95 transition-transform">
+                        Generate Free Sample
+                    </button>
+<p class="text-[10px] text-center mt-4 text-on-surface-variant/60 leading-tight">
+                        By clicking generate, you agree to our Terms of Service. Samples contain voice-over watermarks. Full, unbranded packages available for purchase after review.
+                    </p>
+</div>
+</form>
+</div>
+<!-- Trust Signals / Features -->
+<section class="mt-12 grid grid-cols-2 gap-4">
+<div class="p-5 bg-surface-container-low rounded-2xl border border-outline-variant/5">
+<span class="material-symbols-outlined text-tertiary mb-3" data-icon="timer">timer</span>
+<h4 class="text-xs font-label font-bold uppercase tracking-wider text-white mb-1">Fast Turnaround</h4>
+<p class="text-[11px] text-on-surface-variant">Ready in under 10 minutes</p>
+</div>
+<div class="p-5 bg-surface-container-low rounded-2xl border border-outline-variant/5">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="verified">verified</span>
+<h4 class="text-xs font-label font-bold uppercase tracking-wider text-white mb-1">AI Precision</h4>
+<p class="text-[11px] text-on-surface-variant">Forged for premium growth</p>
+</div>
+</section>
+<!-- Preview Image Card -->
+<div class="mt-10 rounded-[2rem] overflow-hidden relative aspect-video shadow-2xl">
+<img alt="Professional studio microphone with blue neon light in a dark creative workspace" class="w-full h-full object-cover" data-alt="Modern podcast studio setup with professional microphone and blue neon accent lighting in a dark technical workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR2djEHKmdC6EGHu792a2Y6GqnaNwk9AB3LXaW4XLHc97Z3JACWRzsWcqp1GRLspzi2scppv5gRoqOn4ztPaylKp2YYKw45ZC1OAhmUIkeG7IYemFrP_E9AVVAOk99d5kWJhyHtu1rRFcNdHDVTwHaBkBzYYJhug7ajUL5iHvLxn_s72Z5_aPCLsS2UfoWEgCdFaGDjnMkbAniMrt6YMleF78fSCM_A0Vhl6f7h_wiEgNEHT6_zqfYUTc71GJ1zFkwMNlEUeTz4p8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<p class="text-[10px] font-label font-bold uppercase tracking-[0.2em] text-primary">Technical Excellence</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#171f33] rounded-t-[32px] mt-12">
+<div class="px-8 py-16 max-w-7xl mx-auto space-y-12">
+<div>
+<div class="text-xl font-bold font-space-grotesk text-white mb-6">EchoForge</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-4">
+<a class="block text-gray-400 hover:text-[#0EA5E9] transition-colors text-sm" href="#">Podcast</a>
+<a class="block text-gray-400 hover:text-[#0EA5E9] transition-colors text-sm" href="#">Audits</a>
+<a class="block text-gray-400 hover:text-[#0EA5E9] transition-colors text-sm" href="#">Results</a>
+</div>
+<div class="space-y-4">
+<a class="block text-gray-400 hover:text-[#0EA5E9] transition-colors text-sm" href="#">Contact</a>
+<a class="block text-gray-400 hover:text-[#0EA5E9] transition-colors text-sm" href="#">Privacy</a>
+<a class="block text-gray-400 hover:text-[#0EA5E9] transition-colors text-sm" href="#">Terms</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 flex flex-col items-center gap-4">
+<span class="text-xs font-space-grotesk uppercase tracking-widest text-[#4edea3]">Forged for growth</span>
+<p class="text-gray-400 text-xs text-center">© 2024 EchoForge AI. Forged for growth.</p>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation (Mobile Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface/80 backdrop-blur-xl border-t border-outline-variant/10 px-6 py-3 flex justify-around items-center z-50">
+<button class="flex flex-col items-center gap-1 text-gray-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-medium font-space-grotesk">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#0EA5E9] font-bold">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="text-[10px] font-space-grotesk">Try Sample</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-medium font-space-grotesk">Pricing</span>
+</button>
+</nav>
+</body></html>
