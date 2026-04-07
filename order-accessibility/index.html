@@ -217,6 +217,7 @@
         </div>
         <h2 class="text-2xl font-headline font-bold text-white mb-3">Accessibility audit queued.</h2>
         <p class="text-on-surface-variant mb-6 leading-relaxed">Your request has been submitted to the live audit pipeline. We will process the scan and deliver the roadmap to the email you provided.</p>
+        <p id="success-audit-id" class="hidden text-xs font-label uppercase tracking-widest text-tertiary mb-6"></p>
         <p class="text-sm text-on-surface-variant mb-8">Need broader growth recommendations too? The Premium audit bundle includes this accessibility audit automatically.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-3">
           <a href="/order-audit?tier=premium" class="px-6 py-3 bg-secondary text-on-secondary font-headline font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all">View Premium Bundle</a>
@@ -275,7 +276,7 @@
 
 <script>
 (function() {
-  const API_URL = '/api/v1/audit/accessibility/initiate';
+  const API_URL = '/api/audit/accessibility/initiate';
 
   const form = document.getElementById('accessibility-form');
   const urlInput = document.getElementById('url');
@@ -291,6 +292,7 @@
   const submitLabel = document.getElementById('submit-label');
   const submitIcon = document.getElementById('submit-icon');
   const successState = document.getElementById('success-state');
+  const successAuditId = document.getElementById('success-audit-id');
 
   function showError(el, textEl, msg) {
     textEl.textContent = msg;
@@ -359,17 +361,24 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          target_url: urlVal,
+          url: urlVal,
           client_id: emailVal,
-          client_email: emailVal,
-          notes: notesVal,
-          is_bundled: false
+          is_bundled: false,
+          is_testing: false
         })
       });
 
       if (response.ok || response.status === 201 || response.status === 202) {
+        let data = null;
+        try {
+          data = await response.json();
+        } catch (_) {}
         form.classList.add('hidden');
         successState.classList.remove('hidden');
+        if (data && data.audit_id) {
+          successAuditId.textContent = `Audit ID: ${data.audit_id}`;
+          successAuditId.classList.remove('hidden');
+        }
         window.scrollTo({ top: 0, behavior: 'smooth' });
         return;
       }
