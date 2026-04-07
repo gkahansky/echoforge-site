@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Order your marketing audit. Premium now includes a standalone accessibility audit as a bundled value-add."/>
+<meta name="description" content="Order your marketing audit. Premium now includes accessibility coverage as a bundled value-add."/>
 <title>Order Marketing Audit | EchoForge</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -104,7 +104,7 @@
       Order your deep<br/>marketing audit.
     </h1>
     <p class="text-on-surface-variant font-body leading-relaxed max-w-md mx-auto">
-      Enter your URL, select your tier, and we will review your website across six business-critical dimensions. Premium now adds a standalone accessibility audit, making it the strongest package for both growth and compliance.
+      Enter your URL, select your tier, and we will review your website across six business-critical dimensions. Premium now adds accessibility coverage, making it the strongest package for both growth and compliance.
     </p>
   </section>
 
@@ -120,7 +120,7 @@
     </div>
     <div class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container rounded-full text-xs font-label text-on-surface-variant">
       <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">workspace_premium</span>
-      Premium includes accessibility audit
+      Premium includes accessibility coverage
     </div>
   </div>
 
@@ -160,11 +160,11 @@
               <span class="font-headline font-bold text-white">Premium</span>
               <span class="font-label font-bold text-secondary">$149</span>
             </div>
-            <span class="text-xs text-on-surface-variant font-label">+ Copy rewrites + $99 accessibility audit</span>
+            <span class="text-xs text-on-surface-variant font-label">+ Copy rewrites + accessibility coverage</span>
           </label>
         </div>
         <p class="mt-3 text-xs text-on-surface-variant leading-relaxed">
-          Premium adds a one-time accessibility audit with issue severity, remediation guidance, and developer-ready selectors. Need only compliance coverage? <a href="/order-accessibility/" class="text-tertiary hover:underline">Order the standalone accessibility audit for $99</a>.
+          Premium adds accessibility coverage with issue severity, remediation guidance, and developer-ready selectors. Need only compliance coverage? <a href="/order-accessibility/" class="text-tertiary hover:underline">Order the 5-page WCAG audit for $99</a> or <a href="/try-accessibility" class="text-tertiary hover:underline">start with a free accessibility sample</a>.
         </p>
       </div>
 
@@ -254,11 +254,11 @@
           id="submit-btn"
           class="w-full py-5 rounded-2xl bg-secondary text-on-secondary font-headline font-bold text-lg active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2 forge-bloom"
         >
-          <span id="submit-label">Proceed to Payment</span>
+          <span id="submit-label">Continue on Fiverr</span>
           <span class="material-symbols-outlined text-xl" id="submit-icon">shopping_cart_checkout</span>
         </button>
         <p class="text-[10px] text-center mt-4 text-on-surface-variant/60 leading-relaxed">
-          By submitting you agree to our Terms of Service. You will be redirected to our secure payment gateway to complete your purchase. Audit delivered within 24 hours. Premium bundles the standalone accessibility audit automatically.
+          By submitting you agree to our Terms of Service. You will be redirected to Fiverr to complete your purchase. Audit delivered within 24 hours. Premium bundles accessibility coverage automatically.
         </p>
       </div>
 
@@ -269,8 +269,8 @@
       <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6 forge-bloom">
         <span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
       </div>
-      <h2 class="text-2xl font-headline font-bold text-white mb-3">Redirecting to checkout...</h2>
-      <p class="text-on-surface-variant mb-8 leading-relaxed">If you are not redirected automatically within a few seconds, <a href="#" class="text-secondary hover:underline">click here to complete your payment</a>.</p>
+      <h2 class="text-2xl font-headline font-bold text-white mb-3">Redirecting to Fiverr...</h2>
+      <p class="text-on-surface-variant mb-8 leading-relaxed">If you are not redirected automatically within a few seconds, <a href="https://www.fiverr.com/s/e64QqGg" class="text-secondary hover:underline" target="_blank" rel="noopener noreferrer">click here to open the Fiverr gig</a>.</p>
     </div>
 
   </div>
@@ -296,6 +296,7 @@
 
 <script>
 (function() {
+  const FIVERR_URL = 'https://www.fiverr.com/s/e64QqGg';
   const params = new URLSearchParams(window.location.search);
   const selectedTier = params.get('tier');
   
@@ -303,8 +304,6 @@
     const radio = document.querySelector(`input[name="tier"][value="${selectedTier}"]`);
     if (radio) radio.checked = true;
   }
-
-  const API_URL = '/api/ventures/marketing-audit/orders';
 
   const form = document.getElementById('audit-form');
   const urlInput = document.getElementById('url');
@@ -343,11 +342,11 @@
   function setLoading(loading) {
     submitBtn.disabled = loading;
     if (loading) {
-      submitLabel.textContent = 'Processing...';
+      submitLabel.textContent = 'Redirecting...';
       submitIcon.textContent = 'hourglass_top';
       submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
     } else {
-      submitLabel.textContent = 'Proceed to Payment';
+      submitLabel.textContent = 'Continue on Fiverr';
       submitIcon.textContent = 'shopping_cart_checkout';
       submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
     }
@@ -381,47 +380,12 @@
     if (!valid) return;
 
     setLoading(true);
-
-    try {
-      const formData = new FormData(form);
-      const dataObj = {
-        url: urlVal,
-        client_email: emailVal,
-        tier: tierVal,
-        report_type: 'full'
-      };
-      
-      const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(dataObj)
-      });
-
-      if (response.ok || response.status === 201 || response.status === 202) {
-        form.classList.add('hidden');
-        successState.classList.remove('hidden');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else if (response.status === 401 || response.status === 403) {
-        // Mock payment flow for unauthenticated endpoints
-        form.classList.add('hidden');
-        successState.classList.remove('hidden');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        let msg = 'Something went wrong. Please try again.';
-        try {
-          const data = await response.json();
-          if (data.message) msg = data.message;
-          else if (data.error) msg = data.error;
-          if (response.status === 429) msg = 'You\'ve already submitted a sample today. Please try again tomorrow.';
-          if (response.status === 422 || response.status === 400) msg = 'Please check the URL and try again.';
-        } catch (_) {}
-        setLoading(false);
-        showError(apiError, apiErrorText, msg);
-      }
-    } catch (_) {
-      setLoading(false);
-      showError(apiError, apiErrorText, 'Network error. Check your connection and try again.');
-    }
+    form.classList.add('hidden');
+    successState.classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.setTimeout(function() {
+      window.location.href = FIVERR_URL;
+    }, 250);
   });
 })();
 </script>

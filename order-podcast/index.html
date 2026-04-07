@@ -271,11 +271,11 @@
           id="submit-btn"
           class="w-full py-5 rounded-2xl bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold text-lg active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2"
         >
-          <span id="submit-label">Proceed to Payment</span>
+          <span id="submit-label">Continue on Fiverr</span>
           <span class="material-symbols-outlined text-xl" id="submit-icon">shopping_cart_checkout</span>
         </button>
         <p class="text-[10px] text-center mt-4 text-on-surface-variant/60 leading-relaxed">
-          By submitting you agree to our Terms of Service. You will be redirected to our secure payment processor (Fiverr). Unbranded content package delivered to your email in 24 hours.
+          By submitting you agree to our Terms of Service. You will be redirected to Fiverr to complete the order. Unbranded content package delivered to your email in 24 hours.
         </p>
       </div>
 
@@ -286,8 +286,8 @@
       <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6 forge-bloom">
         <span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
       </div>
-      <h2 class="text-2xl font-headline font-bold text-white mb-3">Redirecting to checkout...</h2>
-      <p class="text-on-surface-variant mb-8 leading-relaxed">If you are not redirected automatically within a few seconds, <a href="#" class="text-primary hover:underline">click here to complete your payment</a>.</p>
+      <h2 class="text-2xl font-headline font-bold text-white mb-3">Redirecting to Fiverr...</h2>
+      <p class="text-on-surface-variant mb-8 leading-relaxed">If you are not redirected automatically within a few seconds, <a href="https://www.fiverr.com/s/gDbQ8Gb" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">click here to open the Fiverr gig</a>.</p>
     </div>
 
   </div>
@@ -313,6 +313,7 @@
 
 <script>
 (function() {
+  const FIVERR_URL = 'https://www.fiverr.com/s/gDbQ8Gb';
   const params = new URLSearchParams(window.location.search);
   const selectedTier = params.get('tier');
   
@@ -320,8 +321,6 @@
     const radio = document.querySelector(`input[name="tier"][value="${selectedTier}"]`);
     if (radio) radio.checked = true;
   }
-
-  const API_URL = '/api/ventures/content-studio/orders';
 
   const form = document.getElementById('podcast-form');
   const fileInput = document.getElementById('file-input');
@@ -333,9 +332,6 @@
   const removeFileBtn = document.getElementById('remove-file');
   const fileError = document.getElementById('file-error');
   const fileErrorText = document.getElementById('file-error-text');
-  const uploadProgress = document.getElementById('upload-progress');
-  const progressBar = document.getElementById('progress-bar');
-  const progressPct = document.getElementById('progress-pct');
   const emailInput = document.getElementById('email');
   const emailError = document.getElementById('email-error');
   const emailErrorText = document.getElementById('email-error-text');
@@ -420,11 +416,11 @@
   function setLoading(loading) {
     submitBtn.disabled = loading;
     if (loading) {
-      submitLabel.textContent = 'Uploading...';
+      submitLabel.textContent = 'Redirecting...';
       submitIcon.textContent = 'hourglass_top';
       submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
     } else {
-      submitLabel.textContent = 'Proceed to Payment';
+      submitLabel.textContent = 'Continue on Fiverr';
       submitIcon.textContent = 'shopping_cart_checkout';
       submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
     }
@@ -452,69 +448,13 @@
     if (!valid) return;
 
     setLoading(true);
-    uploadProgress.classList.remove('hidden');
-
-    const formData = new FormData(form);
-    formData.set('file', selectedFile);
-    formData.set('email', email);
-
-    try {
-      await uploadWithProgress(formData);
-    } catch (err) {
-      setLoading(false);
-      uploadProgress.classList.add('hidden');
-      const msg = err.message || 'Something went wrong. Please try again.';
-      showError(apiError, apiErrorText, msg);
-    }
-  });
-
-  async function uploadWithProgress(formData) {
-    return new Promise((resolve, reject) => {
-      const xhr = new XMLHttpRequest();
-
-      xhr.upload.addEventListener('progress', e => {
-        if (e.lengthComputable) {
-          const pct = Math.round((e.loaded / e.total) * 100);
-          progressBar.style.width = pct + '%';
-          progressPct.textContent = pct + '%';
-        }
-      });
-
-      xhr.addEventListener('load', () => {
-        if (xhr.status === 200 || xhr.status === 201 || xhr.status === 202) {
-          showSuccess();
-          resolve();
-        } else if (xhr.status === 401 || xhr.status === 403) {
-          // Mock payment gateway flow since we don't have bearer tokens in frontend
-          showSuccess();
-          resolve();
-        } else {
-          let msg = 'Request failed. Please try again.';
-          try {
-            const data = JSON.parse(xhr.responseText);
-            if (data.message) msg = data.message;
-            else if (data.error) msg = data.error;
-            if (xhr.status === 400 && msg.toLowerCase().includes('format')) msg = 'Unsupported file format.';
-            if (xhr.status === 413 || msg.toLowerCase().includes('large')) msg = 'File is too large. Please upload a file under 200 MB.';
-            if (xhr.status === 429) msg = 'You\'ve already submitted a sample today. Please try again tomorrow.';
-          } catch(_) {}
-          reject(new Error(msg));
-        }
-      });
-
-      xhr.addEventListener('error', () => reject(new Error('Network error. Check your connection and try again.')));
-      xhr.addEventListener('abort', () => reject(new Error('Upload cancelled.')));
-
-      xhr.open('POST', API_URL);
-      xhr.send(formData);
-    });
-  }
-
-  function showSuccess() {
     form.classList.add('hidden');
     successState.classList.remove('hidden');
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+    window.setTimeout(() => {
+      window.location.href = FIVERR_URL;
+    }, 250);
+  });
 
 })();
 </script>
