@@ -318,23 +318,10 @@
     }
   }
 
-  async function postJson(urlVal, emailVal) {
-    return fetch(API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        url: urlVal,
-        email: emailVal,
-        client_email: emailVal,
-        client_id: emailVal,
-        is_testing: true
-      })
-    });
-  }
-
   async function postForm(urlVal, emailVal) {
     const body = new URLSearchParams({
       url: urlVal,
+      target_url: urlVal,
       email: emailVal,
       client_email: emailVal,
       client_id: emailVal,
@@ -345,6 +332,33 @@
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: body.toString()
     });
+  }
+
+  async function extractErrorMessage(response) {
+    const fallback = response.status >= 500
+      ? 'The sample endpoint failed while creating the audit record. Please try again shortly.'
+      : 'Something went wrong. Please try again.';
+
+    const contentType = response.headers.get('content-type') || '';
+
+    try {
+      if (contentType.includes('application/json')) {
+        const data = await response.json();
+        if (typeof data.detail === 'string' && data.detail) return data.detail;
+        if (Array.isArray(data.detail) && data.detail.length > 0) {
+          const firstDetail = data.detail[0];
+          if (typeof firstDetail === 'string') return firstDetail;
+          if (firstDetail && typeof firstDetail.msg === 'string') return firstDetail.msg;
+        }
+        if (typeof data.error === 'string' && data.error) return data.error;
+        if (typeof data.message === 'string' && data.message) return data.message;
+      }
+
+      const text = (await response.text()).trim();
+      if (text) return text.slice(0, 300);
+    } catch (_) {}
+
+    return fallback;
   }
 
   form.addEventListener('submit', async function(e) {
@@ -375,23 +389,14 @@
     setLoading(true);
 
     try {
-      let response = await postJson(urlVal, emailVal);
-      if ([400, 415, 422].includes(response.status)) {
-        response = await postForm(urlVal, emailVal);
-      }
+      const response = await postForm(urlVal, emailVal);
 
       if (response.ok || response.status === 201 || response.status === 202) {
         form.classList.add('hidden');
         successState.classList.remove('hidden');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
-        let msg = 'Something went wrong. Please try again.';
-        try {
-          const data = await response.json();
-          if (data.message) msg = data.message;
-          else if (data.error) msg = data.error;
-          else if (data.detail) msg = typeof data.detail === 'string' ? data.detail : msg;
-        } catch (_) {}
+        const msg = await extractErrorMessage(response);
         setLoading(false);
         showError(apiError, apiErrorText, msg);
       }
