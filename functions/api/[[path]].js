@@ -4,18 +4,20 @@ export async function onRequest(context) {
   
   // Clone the headers to a new mutable Headers object
   const headers = new Headers(context.request.headers);
-  const isAccessibilityAuditRoute = newUrl.pathname.startsWith("/api/audit/accessibility/");
+  const isSecuredRoute =
+    newUrl.pathname.startsWith("/api/audit/accessibility/") ||
+    newUrl.pathname.startsWith("/api/ventures/security-audit/");
   const apiToken = context.env.PLANB_API_TOKEN || context.env.API_TOKEN;
-  
+
   // Update the Host header to match the target API
   headers.set("Host", newUrl.hostname);
   // Also remove Origin if it's there to let server accept POSTs gracefully
   headers.delete("Origin");
 
-  // Accessibility audit routes are secured; inject the bearer token at the edge.
-  if (isAccessibilityAuditRoute) {
+  // Secured routes require a bearer token injected at the edge.
+  if (isSecuredRoute) {
     if (!apiToken) {
-      return new Response(JSON.stringify({ error: "Accessibility audit API token is not configured." }), {
+      return new Response(JSON.stringify({ error: "API token is not configured." }), {
         status: 500,
         headers: { "Content-Type": "application/json" }
       });
