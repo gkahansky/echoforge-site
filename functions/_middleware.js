@@ -1,6 +1,9 @@
 const BLOCKED_PATTERNS = [
   /^\/\.env(\..*)?$/,   // .env, .env.local, .env.production, etc.
   /^\/\.git(\/|$)/,     // .git directory and its contents
+  /^\/config\.php$/i,   // config.php
+  /^\/database\.php$/i, // database.php (also flagged in report)
+  /^\/backup\.(zip|tar\.gz)$/i, // backup archives (also flagged in report)
 ];
 
 export async function onRequest(context) {
