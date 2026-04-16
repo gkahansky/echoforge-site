@@ -237,12 +237,19 @@
         <span id="api-error-text"></span>
       </p>
 
+      <!-- ToS checkbox -->
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input type="checkbox" id="tos-checkbox" class="mt-0.5 w-4 h-4 shrink-0 rounded border-outline-variant/50 bg-surface-container-lowest accent-secondary focus:ring-secondary/50" required />
+        <span class="text-xs text-on-surface-variant leading-relaxed">I agree to the Terms of Service</span>
+      </label>
+
       <!-- Submit -->
       <div class="pt-2">
         <button
           type="submit"
           id="submit-btn"
-          class="w-full py-5 rounded-2xl bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold text-lg active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2"
+          disabled
+          class="w-full py-5 rounded-2xl bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold text-lg active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100"
         >
           <span id="submit-label">Generate Free Sample</span>
           <span class="material-symbols-outlined text-xl" id="submit-icon">bolt</span>
@@ -362,6 +369,9 @@
   const toggleOptional = document.getElementById('toggle-optional');
   const optionalFields = document.getElementById('optional-fields');
   const toggleIcon = document.getElementById('toggle-icon');
+  const tosCheckbox = document.getElementById('tos-checkbox');
+
+  tosCheckbox.addEventListener('change', () => { submitBtn.disabled = !tosCheckbox.checked; });
 
   const ACCEPTED = ['.mp3','.mp4','.m4a','.wav','.webm'];
   const MAX_BYTES = 200 * 1024 * 1024;
@@ -431,7 +441,7 @@
   }
 
   function setLoading(loading) {
-    submitBtn.disabled = loading;
+    submitBtn.disabled = loading || !tosCheckbox.checked;
     if (loading) {
       submitLabel.textContent = 'Uploading...';
       submitIcon.textContent = 'hourglass_top';
