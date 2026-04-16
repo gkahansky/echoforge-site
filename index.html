@@ -92,7 +92,8 @@
     <div class="hidden md:flex items-center gap-8">
       <a href="#services" class="text-on-surface-variant hover:text-white transition-colors font-headline tracking-tight text-sm">Services</a>
       <a href="#how-it-works" class="text-on-surface-variant hover:text-white transition-colors font-headline tracking-tight text-sm">How It Works</a>
-      <a href="#compliance-pricing" class="text-on-surface-variant hover:text-tertiary transition-colors font-headline tracking-tight text-sm">Compliance &amp; Accessibility</a>
+      <a href="#security-pricing" class="text-on-surface-variant hover:text-error transition-colors font-headline tracking-tight text-sm">Security Audit</a>
+      <a href="#compliance-pricing" class="text-on-surface-variant hover:text-tertiary transition-colors font-headline tracking-tight text-sm">Accessibility</a>
       <a href="#pricing" class="text-on-surface-variant hover:text-white transition-colors font-headline tracking-tight text-sm">Pricing</a>
       <a href="#faq" class="text-on-surface-variant hover:text-white transition-colors font-headline tracking-tight text-sm">FAQ</a>
     </div>
@@ -122,9 +123,9 @@
       24 Hours.
     </h1>
     <p class="text-xl text-on-surface-variant max-w-2xl font-light leading-relaxed mb-12">
-      Two focused services for small businesses and independent creators. Upload your podcast and get a full content package. Submit your URL for a marketing audit, or preview an accessibility sample report before booking a compliance review.
+      Three focused services for small businesses and independent creators. Upload your podcast, submit your URL for a marketing audit, or get a full web application security audit — OWASP Top 10, exposed paths, and a remediation roadmap.
     </p>
-    <div class="flex flex-col sm:flex-row gap-4">
+    <div class="flex flex-col sm:flex-row flex-wrap gap-4">
       <a href="/try-podcast" class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all text-center forge-bloom-primary">
         Try Podcast Sample — Free
       </a>
@@ -133,6 +134,9 @@
       </a>
       <a href="/try-accessibility" class="px-8 py-4 bg-tertiary/10 border border-tertiary/30 text-tertiary font-headline font-bold rounded-xl hover:bg-tertiary/20 active:scale-95 transition-all text-center">
         Try Accessibility — Free
+      </a>
+      <a href="/order-security/" class="px-8 py-4 bg-error/10 border border-error/30 text-error font-headline font-bold rounded-xl hover:bg-error/20 active:scale-95 transition-all text-center">
+        Security Audit — from $49
       </a>
     </div>
     <p class="mt-6 text-xs text-on-surface-variant/60 font-label tracking-wide">No credit card. Real output. Delivered in minutes.</p>
@@ -143,10 +147,10 @@
 <section id="services" class="py-24 bg-surface-container">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
     <div class="mb-16">
-      <span class="font-label text-xs tracking-widest text-primary uppercase mb-3 block">Two Services. One Forge.</span>
+      <span class="font-label text-xs tracking-widest text-primary uppercase mb-3 block">Three Services. One Forge.</span>
       <h2 class="text-4xl md:text-5xl font-headline font-bold text-white">What EchoForge Does</h2>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
       <!-- Podcast Studio Card -->
       <div class="bg-surface-container-high rounded-2xl p-8 flex flex-col">
@@ -247,6 +251,51 @@
         </div>
       </div>
 
+      <!-- Security Audit Card -->
+      <div class="bg-surface-container-low border border-error/20 rounded-2xl p-8 flex flex-col relative overflow-hidden">
+        <div class="absolute -bottom-16 -right-16 w-48 h-48 bg-error/5 rounded-full blur-3xl"></div>
+        <div class="relative z-10 flex flex-col h-full">
+          <div class="flex justify-between items-start mb-8">
+            <div class="w-14 h-14 bg-error/10 rounded-xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-error text-3xl">security</span>
+            </div>
+            <span class="font-label text-[10px] tracking-widest text-on-surface-variant bg-surface/40 px-2 py-1 rounded uppercase">Service 03</span>
+          </div>
+          <h3 class="text-3xl font-headline font-bold text-white mb-3">Security Audit</h3>
+          <p class="text-on-surface-variant mb-6 leading-relaxed">Submit your web app URL, verify ownership, and receive a full black-box security audit. OWASP Top 10, exposed credentials, misconfigurations, missing headers — every finding confirmed with a remediation roadmap.</p>
+          <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-error/10 border border-error/20 text-[10px] font-label font-bold uppercase tracking-widest text-error">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 20;">shield</span>
+            Authorised testing only — domain ownership verified
+          </div>
+          <div class="grid grid-cols-1 gap-2 mb-8">
+            <div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+              <span class="text-sm text-on-surface-variant">OWASP Top 10 Coverage</span>
+              <span class="text-xs font-label text-error uppercase">Confirmed</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+              <span class="text-sm text-on-surface-variant">Exposed Files &amp; Paths</span>
+              <span class="text-xs font-label text-error uppercase">Confirmed</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+              <span class="text-sm text-on-surface-variant">HTTP Security Headers</span>
+              <span class="text-xs font-label text-error uppercase">Graded</span>
+            </div>
+            <div class="flex items-center justify-between py-2">
+              <span class="text-sm text-on-surface-variant">Remediation Roadmap</span>
+              <span class="text-xs font-label text-error uppercase">Included</span>
+            </div>
+          </div>
+          <div class="mt-auto flex flex-col sm:flex-row gap-3">
+            <a href="/order-security/" class="flex-1 text-center py-3.5 bg-error/80 text-white font-headline font-bold rounded-xl hover:bg-error active:scale-95 transition-all text-sm">
+              Order Security Audit
+            </a>
+            <a href="#security-pricing" class="flex-1 text-center py-3.5 border border-outline-variant/20 text-on-surface-variant font-headline font-medium rounded-xl hover:bg-surface-container-highest transition-all text-sm">
+              See Pricing
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -292,6 +341,50 @@
           <div class="font-label text-xs text-tertiary uppercase tracking-widest mb-2">Step 03</div>
           <h4 class="text-lg font-headline font-bold text-white mb-3">Receive in 24h</h4>
           <p class="text-sm text-on-surface-variant leading-relaxed">A complete content package lands in your inbox — ready to paste into your podcast host, social, and newsletter.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security Audit Flow -->
+    <div class="mb-20">
+      <div class="flex items-center gap-4 mb-12">
+        <div class="w-8 h-8 bg-error/10 rounded-lg flex items-center justify-center">
+          <span class="material-symbols-outlined text-error text-lg">security</span>
+        </div>
+        <h3 class="text-xl font-headline font-bold text-white">Security Audit</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-6 relative z-10 border border-outline-variant/20">
+            <span class="material-symbols-outlined text-3xl text-primary">link</span>
+          </div>
+          <div class="font-label text-xs text-primary uppercase tracking-widest mb-2">Step 01</div>
+          <h4 class="text-lg font-headline font-bold text-white mb-3">Submit Your URL</h4>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Enter the target URL, choose a tier, and provide a domain contact email for ownership verification.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-6 relative z-10 border border-outline-variant/20">
+            <span class="material-symbols-outlined text-3xl text-secondary">verified_user</span>
+          </div>
+          <div class="font-label text-xs text-secondary uppercase tracking-widest mb-2">Step 02</div>
+          <h4 class="text-lg font-headline font-bold text-white mb-3">Verify Ownership</h4>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Click the one-link email we send to your domain. Confirms you're authorised to test — scan starts automatically.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-6 relative z-10 border border-outline-variant/20">
+            <span class="material-symbols-outlined text-3xl text-error">manage_search</span>
+          </div>
+          <div class="font-label text-xs text-error uppercase tracking-widest mb-2">Step 03</div>
+          <h4 class="text-lg font-headline font-bold text-white mb-3">We Scan &amp; Probe</h4>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Automated pipeline runs OSINT recon, surface mapping, and vulnerability scanning against your target.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-6 relative z-10 border border-outline-variant/20">
+            <span class="material-symbols-outlined text-3xl text-tertiary">picture_as_pdf</span>
+          </div>
+          <div class="font-label text-xs text-tertiary uppercase tracking-widest mb-2">Step 04</div>
+          <h4 class="text-lg font-headline font-bold text-white mb-3">PDF Report Delivered</h4>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Full report with CVSS-scored findings, attack chain narratives, and a prioritised remediation roadmap.</p>
         </div>
       </div>
     </div>
@@ -543,6 +636,115 @@
       </div>
     </div>
 
+    <!-- Security Audit Pricing -->
+    <div id="security-pricing" class="mb-20">
+      <div class="flex items-center gap-3 mb-10">
+        <span class="material-symbols-outlined text-error">security</span>
+        <h3 class="text-2xl font-headline font-bold text-white">Security Audit</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Starter -->
+        <div class="bg-surface-container rounded-2xl p-8 flex flex-col">
+          <div class="font-label text-xs text-on-surface-variant uppercase tracking-widest mb-4">Starter</div>
+          <div class="mb-6">
+            <span class="text-5xl font-headline font-bold text-white">$49</span>
+            <span class="text-on-surface-variant text-sm ml-2">one-time</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              OWASP Top 10 fingerprint
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              HTTP security headers
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Exposed paths &amp; files
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Remediation roadmap
+            </li>
+          </ul>
+          <a href="/order-security/?tier=starter" class="mt-auto text-center py-3 border border-error/30 text-error font-headline font-semibold rounded-xl hover:bg-error/10 transition-all text-sm">
+            Order Starter
+          </a>
+        </div>
+
+        <!-- Professional -->
+        <div class="bg-surface-container rounded-2xl p-8 flex flex-col border-2 border-error relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-error text-white text-[10px] font-label font-bold uppercase tracking-widest px-3 py-1 rounded-full">Best Value</div>
+          <div class="font-label text-xs text-error uppercase tracking-widest mb-4">Professional</div>
+          <div class="mb-6">
+            <span class="text-5xl font-headline font-bold text-white">$149</span>
+            <span class="text-on-surface-variant text-sm ml-2">one-time</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Everything in Starter
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Active probing &amp; injection testing
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Auth bypass &amp; session testing
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Attack chain narratives
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              CVSS 3.1 scoring
+            </li>
+          </ul>
+          <a href="/order-security/?tier=professional" class="mt-auto text-center py-3 bg-error/80 text-white font-headline font-bold rounded-xl hover:bg-error active:scale-95 transition-all text-sm">
+            Order Professional
+          </a>
+        </div>
+
+        <!-- Agency -->
+        <div class="bg-surface-container rounded-2xl p-8 flex flex-col">
+          <div class="font-label text-xs text-on-surface-variant uppercase tracking-widest mb-4">Agency</div>
+          <div class="mb-6">
+            <span class="text-5xl font-headline font-bold text-white">$349</span>
+            <span class="text-on-surface-variant text-sm ml-2">one-time</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Everything in Professional
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Multi-subdomain scope
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              Full API surface scan
+            </li>
+            <li class="flex items-center gap-2 text-sm text-on-surface/80">
+              <span class="material-symbols-outlined text-error text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+              White-label report option
+            </li>
+          </ul>
+          <a href="/order-security/?tier=agency" class="mt-auto text-center py-3 border border-outline-variant/20 text-on-surface-variant font-headline font-semibold rounded-xl hover:bg-surface-container-high transition-all text-sm">
+            Order Agency
+          </a>
+        </div>
+
+      </div>
+      <div class="mt-6 text-center text-sm text-on-surface-variant">
+        All tiers include a free retest within 30 days. Domain ownership verification required before scanning begins.
+      </div>
+    </div>
+
     <!-- Compliance Pricing -->
     <div id="compliance-pricing">
       <div class="flex items-center gap-3 mb-10">
@@ -719,6 +921,16 @@
 
       <details class="bg-surface-container-high rounded-xl group">
         <summary class="flex justify-between items-center px-6 py-5 cursor-pointer list-none">
+          <span class="font-headline font-semibold text-white">How does the security audit work?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed text-sm">
+          You submit your target URL and verify domain ownership via a one-click email link. Once confirmed, an automated pipeline runs OSINT recon, surface mapping, and vulnerability scanning (OWASP Top 10, exposed files, missing headers, CORS, TLS). Results are correlated by AI into a full PDF with CVSS-scored findings, attack chain narratives, and a prioritised remediation roadmap. Starter scans deliver within 24 hours; Professional and Agency within 72 hours.
+        </div>
+      </details>
+
+      <details class="bg-surface-container-high rounded-xl group">
+        <summary class="flex justify-between items-center px-6 py-5 cursor-pointer list-none">
           <span class="font-headline font-semibold text-white">Do you offer accessibility audits?</span>
           <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
         </summary>
@@ -761,9 +973,9 @@
       Start with something free.
     </h2>
     <p class="text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-      Try the Podcast Studio, preview your marketing audit, or run a free accessibility sample report.
+      Try the Podcast Studio, preview your marketing audit, run a free accessibility sample, or order a security audit.
     </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
       <a href="/try-podcast" class="px-10 py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold text-lg rounded-xl hover:opacity-90 active:scale-95 transition-all forge-bloom-primary">
         Try Podcast Sample
       </a>
@@ -772,6 +984,9 @@
       </a>
       <a href="/try-accessibility" class="px-10 py-5 bg-tertiary/10 border border-tertiary/30 text-tertiary font-headline font-bold text-lg rounded-xl hover:bg-tertiary/20 active:scale-95 transition-all">
         Try Accessibility
+      </a>
+      <a href="/order-security/" class="px-10 py-5 bg-error/10 border border-error/30 text-error font-headline font-bold text-lg rounded-xl hover:bg-error/20 active:scale-95 transition-all">
+        Security Audit
       </a>
     </div>
   </div>
@@ -796,6 +1011,7 @@
         <li><a href="/try-podcast" class="text-on-surface-variant hover:text-primary transition-colors">Podcast Content Studio</a></li>
         <li><a href="/try-audit" class="text-on-surface-variant hover:text-primary transition-colors">Marketing Audit</a></li>
         <li><a href="/try-accessibility" class="text-on-surface-variant hover:text-primary transition-colors">Accessibility Sample</a></li>
+        <li><a href="/order-security/" class="text-on-surface-variant hover:text-error transition-colors">Security Audit</a></li>
         <li><a href="#pricing" class="text-on-surface-variant hover:text-primary transition-colors">Pricing</a></li>
       </ul>
     </div>
