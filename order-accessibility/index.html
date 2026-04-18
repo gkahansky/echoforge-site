@@ -93,8 +93,8 @@
   </div>
 </header>
 
-<main class="pt-24 pb-20 px-6 max-w-3xl mx-auto">
-  <section class="mb-12 text-center">
+<main class="pt-24 pb-20 px-6 max-w-xl mx-auto text-center">
+  <section class="mb-10">
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary/10 border border-tertiary/20 mb-6 forge-bloom">
       <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
       <span class="text-[10px] font-label font-bold uppercase tracking-widest text-tertiary">5-Page WCAG Audit</span>
@@ -102,8 +102,8 @@
     <h1 class="text-4xl md:text-5xl font-headline font-bold tracking-tight text-white mb-4">
       Order a focused<br/>5-page WCAG audit.
     </h1>
-    <p class="text-on-surface-variant font-body leading-relaxed max-w-2xl mx-auto">
-      Review up to 5 pages of your live site for $120. We check AA/AAA compliance, flag color contrast problems, and turn the findings into a detailed PDF report your team can act on.
+    <p class="text-on-surface-variant font-body leading-relaxed max-w-md mx-auto">
+      Review up to 5 pages of your live site for $120. We check AA/AAA compliance, flag color contrast problems, and deliver a detailed PDF report your team can act on.
     </p>
   </section>
 
@@ -122,147 +122,50 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-[1.25fr_0.95fr] gap-6 items-start">
-    <div class="bg-surface-container rounded-3xl p-6 md:p-8 shadow-2xl border border-outline-variant/10 relative overflow-hidden" id="form-container">
-      <div class="absolute top-0 right-0 w-48 h-48 bg-tertiary/5 rounded-full -mr-24 -mt-24 blur-3xl pointer-events-none"></div>
-
-      <form id="accessibility-form" class="space-y-8 relative z-10" novalidate>
-        <div class="rounded-2xl border border-tertiary/20 bg-tertiary/5 p-4">
-          <div class="flex items-start justify-between gap-4">
-            <div>
-              <p class="text-xs font-label font-bold uppercase tracking-widest text-tertiary mb-2">5-Page WCAG Audit</p>
-              <p class="text-sm text-on-surface-variant leading-relaxed">Focused compliance review for up to 5 pages with clear issue groupings and color contrast analysis.</p>
-            </div>
-            <div class="text-right shrink-0">
-              <div class="text-3xl font-headline font-bold text-white">$120</div>
-              <div class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">one-time</div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <label for="url" class="text-xs font-label font-bold uppercase tracking-widest text-tertiary block mb-3">
-            1. Website URL to audit
-          </label>
-          <input
-            id="url"
-            name="url"
-            type="url"
-            placeholder="https://yourwebsite.com"
-            autocomplete="url"
-            inputmode="url"
-            class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-tertiary focus:ring-0 py-4 px-0 text-white placeholder:text-on-surface-variant/50 transition-colors"
-            required
-          />
-          <p id="url-error" class="hidden mt-2 text-xs text-error flex items-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">error</span>
-            <span id="url-error-text"></span>
-          </p>
-        </div>
-
-        <div>
-          <label for="email" class="text-xs font-label font-bold uppercase tracking-widest text-tertiary block mb-3">
-            2. Delivery email
-          </label>
-          <input
-            id="email"
-            name="client_email"
-            type="email"
-            placeholder="your@email.com"
-            autocomplete="email"
-            class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-tertiary focus:ring-0 py-4 px-0 text-white placeholder:text-on-surface-variant/50 transition-colors"
-            required
-          />
-          <p id="email-error" class="hidden mt-2 text-xs text-error flex items-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">error</span>
-            <span id="email-error-text"></span>
-          </p>
-        </div>
-
-        <div>
-          <label for="notes" class="text-xs font-label font-bold uppercase tracking-widest text-tertiary block mb-3">
-            3. Optional notes
-          </label>
-          <textarea
-            id="notes"
-            name="notes"
-            placeholder="Protected routes, known problem templates, or areas you want us to prioritize"
-            class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-tertiary focus:ring-0 py-3 px-0 text-sm text-white placeholder:text-on-surface-variant/40 transition-colors resize-none h-24"
-          ></textarea>
-        </div>
-
-        <p id="api-error" class="hidden text-sm text-error bg-error-container/30 rounded-xl px-4 py-3 flex items-center gap-2">
-          <span class="material-symbols-outlined text-base">error</span>
-          <span id="api-error-text"></span>
-        </p>
-
-        <!-- ToS checkbox -->
-        <label class="flex items-start gap-3 cursor-pointer">
-          <input type="checkbox" id="tos-checkbox" class="mt-0.5 w-4 h-4 shrink-0 rounded border-outline-variant/50 bg-surface-container-lowest accent-tertiary focus:ring-tertiary/50" required />
-          <span class="text-xs text-on-surface-variant leading-relaxed">I agree to the Terms of Service</span>
-        </label>
-
-        <div class="pt-2">
-          <button
-            type="submit"
-            id="submit-btn"
-            disabled
-            class="w-full py-5 rounded-2xl bg-tertiary text-on-tertiary font-headline font-bold text-lg active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2 forge-bloom disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100"
-          >
-            <span id="submit-label">Start 5-Page WCAG Audit</span>
-            <span class="material-symbols-outlined text-xl" id="submit-icon">shopping_cart_checkout</span>
-          </button>
-          <p class="text-[10px] text-center mt-4 text-on-surface-variant/60 leading-relaxed">
-            By submitting you agree to our Terms of Service. Your 5-page WCAG audit request is sent directly into the live audit pipeline.
-          </p>
-        </div>
-      </form>
-
-      <div id="success-state" class="hidden text-center py-10">
-        <div class="w-20 h-20 bg-tertiary/10 rounded-full flex items-center justify-center mx-auto mb-6 forge-bloom">
-          <span class="material-symbols-outlined text-tertiary text-4xl" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
-        </div>
-        <h2 class="text-2xl font-headline font-bold text-white mb-3">5-page WCAG audit queued.</h2>
-        <p class="text-on-surface-variant mb-6 leading-relaxed">Your request has been submitted to the live audit pipeline. We will process the scan and deliver the report to the email you provided.</p>
-        <p id="success-audit-id" class="hidden text-xs font-label uppercase tracking-widest text-tertiary mb-6"></p>
-        <p class="text-sm text-on-surface-variant mb-8">Need broader growth recommendations too? The Premium marketing audit bundle includes accessibility coverage automatically.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-3">
-          <a href="https://www.fiverr.com/s/e64QqGg" class="px-6 py-3 bg-secondary text-on-secondary font-headline font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all" target="_blank" rel="noopener noreferrer">View Premium Bundle</a>
-          <a href="mailto:hello@echoforge.biz" class="px-6 py-3 border border-outline-variant/20 text-on-surface-variant font-headline font-semibold rounded-xl hover:bg-surface-container-high transition-all">Email EchoForge</a>
-        </div>
+  <div class="bg-surface-container rounded-3xl p-8 shadow-2xl border border-outline-variant/10 relative overflow-hidden mb-8">
+    <div class="absolute top-0 right-0 w-48 h-48 bg-tertiary/5 rounded-full -mr-24 -mt-24 blur-3xl pointer-events-none"></div>
+    <div class="relative z-10">
+      <div class="w-16 h-16 bg-tertiary/10 rounded-full flex items-center justify-center mx-auto mb-5 forge-bloom">
+        <span class="material-symbols-outlined text-tertiary text-3xl" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">open_in_new</span>
       </div>
+      <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+        Orders are processed securely through our Fiverr gig. Click below to go directly to the order page.
+      </p>
+      <a
+        href="http://www.fiverr.com/s/R78wqKw"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 w-full py-5 rounded-2xl bg-tertiary text-on-tertiary font-headline font-bold text-lg active:scale-95 transition-all shadow-lg forge-bloom hover:opacity-90"
+      >
+        <span>Order on Fiverr</span>
+        <span class="material-symbols-outlined text-xl">shopping_cart_checkout</span>
+      </a>
+      <p class="text-[10px] text-center mt-4 text-on-surface-variant/60 leading-relaxed">
+        You will be taken to our Fiverr gig page to complete your order securely.
+      </p>
     </div>
+  </div>
 
-    <aside class="space-y-6">
-      <div class="bg-surface-container rounded-3xl p-6 border border-outline-variant/10">
-        <p class="text-xs font-label font-bold uppercase tracking-widest text-tertiary mb-5">What you get</p>
-        <ul class="space-y-3">
-          <li class="flex items-center gap-3 text-sm text-on-surface/80">
-            <span class="material-symbols-outlined text-tertiary text-base">warning</span>
-            Findings grouped by severity across up to 5 pages
-          </li>
-          <li class="flex items-center gap-3 text-sm text-on-surface/80">
-            <span class="material-symbols-outlined text-tertiary text-base">code</span>
-            AA/AAA issue detail plus affected selectors for faster fixes
-          </li>
-          <li class="flex items-center gap-3 text-sm text-on-surface/80">
-            <span class="material-symbols-outlined text-tertiary text-base">task_alt</span>
-            Color contrast analysis and user-friendly remediation guidance
-          </li>
-          <li class="flex items-center gap-3 text-sm text-on-surface/80">
-            <span class="material-symbols-outlined text-tertiary text-base">picture_as_pdf</span>
-            Detailed PDF report suitable for handoff to engineering
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-surface-container rounded-3xl p-6 border border-outline-variant/10">
-        <p class="text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant mb-4">Best paired with</p>
-        <h2 class="text-2xl font-headline font-bold text-white mb-3">Premium Marketing Audit</h2>
-        <p class="text-sm text-on-surface-variant leading-relaxed mb-5">If you need messaging, conversion, and compliance coverage together, the Premium audit includes the full marketing audit plus accessibility coverage as a bundled value-add.</p>
-        <a href="https://www.fiverr.com/s/e64QqGg" class="inline-block w-full text-center py-3 bg-secondary text-on-secondary font-headline font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all" target="_blank" rel="noopener noreferrer">See Premium Bundle</a>
-      </div>
-    </aside>
+  <div class="bg-surface-container rounded-3xl p-6 border border-outline-variant/10 text-left">
+    <p class="text-xs font-label font-bold uppercase tracking-widest text-tertiary mb-5">What you get</p>
+    <ul class="space-y-3">
+      <li class="flex items-center gap-3 text-sm text-on-surface/80">
+        <span class="material-symbols-outlined text-tertiary text-base">warning</span>
+        Findings grouped by severity across up to 5 pages
+      </li>
+      <li class="flex items-center gap-3 text-sm text-on-surface/80">
+        <span class="material-symbols-outlined text-tertiary text-base">code</span>
+        AA/AAA issue detail plus affected selectors for faster fixes
+      </li>
+      <li class="flex items-center gap-3 text-sm text-on-surface/80">
+        <span class="material-symbols-outlined text-tertiary text-base">task_alt</span>
+        Color contrast analysis and user-friendly remediation guidance
+      </li>
+      <li class="flex items-center gap-3 text-sm text-on-surface/80">
+        <span class="material-symbols-outlined text-tertiary text-base">picture_as_pdf</span>
+        Detailed PDF report suitable for handoff to engineering
+      </li>
+    </ul>
   </div>
 </main>
 
@@ -281,132 +184,5 @@
   </div>
 </footer>
 
-<script>
-(function() {
-  const API_URL = '/api/audit/accessibility/initiate';
-
-  const form = document.getElementById('accessibility-form');
-  const urlInput = document.getElementById('url');
-  const emailInput = document.getElementById('email');
-  const notesInput = document.getElementById('notes');
-  const urlError = document.getElementById('url-error');
-  const urlErrorText = document.getElementById('url-error-text');
-  const emailError = document.getElementById('email-error');
-  const emailErrorText = document.getElementById('email-error-text');
-  const apiError = document.getElementById('api-error');
-  const apiErrorText = document.getElementById('api-error-text');
-  const submitBtn = document.getElementById('submit-btn');
-  const submitLabel = document.getElementById('submit-label');
-  const submitIcon = document.getElementById('submit-icon');
-  const successState = document.getElementById('success-state');
-  const successAuditId = document.getElementById('success-audit-id');
-  const tosCheckbox = document.getElementById('tos-checkbox');
-
-  tosCheckbox.addEventListener('change', () => { submitBtn.disabled = !tosCheckbox.checked; });
-
-  function showError(el, textEl, msg) {
-    textEl.textContent = msg;
-    el.classList.remove('hidden');
-    el.classList.add('flex');
-  }
-
-  function hideError(el) {
-    el.classList.add('hidden');
-    el.classList.remove('flex');
-  }
-
-  function isValidUrl(value) {
-    try {
-      const parsed = new URL(value);
-      return parsed.protocol === 'http:' || parsed.protocol === 'https:';
-    } catch (_) {
-      return false;
-    }
-  }
-
-  function setLoading(loading) {
-    submitBtn.disabled = loading || !tosCheckbox.checked;
-    if (loading) {
-      submitLabel.textContent = 'Processing...';
-      submitIcon.textContent = 'hourglass_top';
-      submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
-    } else {
-      submitLabel.textContent = 'Start 5-Page WCAG Audit';
-      submitIcon.textContent = 'shopping_cart_checkout';
-      submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-    }
-  }
-
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    hideError(urlError);
-    hideError(emailError);
-    hideError(apiError);
-
-    const urlVal = urlInput.value.trim();
-    const emailVal = emailInput.value.trim();
-    const notesVal = notesInput.value.trim();
-
-    let valid = true;
-
-    if (!urlVal) {
-      showError(urlError, urlErrorText, 'Please enter your website URL.');
-      valid = false;
-    } else if (!isValidUrl(urlVal)) {
-      showError(urlError, urlErrorText, 'Please enter a valid URL starting with https://');
-      valid = false;
-    }
-
-    if (!emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
-      showError(emailError, emailErrorText, 'Please enter a valid email address.');
-      valid = false;
-    }
-
-    if (!valid) return;
-
-    setLoading(true);
-
-    try {
-      const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          url: urlVal,
-          client_id: emailVal,
-          is_bundled: false,
-          is_testing: false
-        })
-      });
-
-      if (response.ok || response.status === 201 || response.status === 202) {
-        let data = null;
-        try {
-          data = await response.json();
-        } catch (_) {}
-        form.classList.add('hidden');
-        successState.classList.remove('hidden');
-        if (data && data.audit_id) {
-          successAuditId.textContent = `Audit ID: ${data.audit_id}`;
-          successAuditId.classList.remove('hidden');
-        }
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        return;
-      }
-
-      let msg = 'Something went wrong. Please try again.';
-      try {
-        const data = await response.json();
-        if (data.message) msg = data.message;
-        else if (data.error) msg = data.error;
-      } catch (_) {}
-      setLoading(false);
-      showError(apiError, apiErrorText, msg);
-    } catch (_) {
-      setLoading(false);
-      showError(apiError, apiErrorText, 'Network error. Check your connection and try again.');
-    }
-  });
-})();
-</script>
 </body>
 </html>

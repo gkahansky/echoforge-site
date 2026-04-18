@@ -3,6 +3,8 @@
         "git commit": true,
         "git push": true,
         "git add": true,
-        "npx wrangler": true
+        "npx wrangler": true,
+        "git remote": true,
+        "Select": true
     }
 }
