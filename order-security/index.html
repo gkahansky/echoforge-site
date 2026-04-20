@@ -92,23 +92,21 @@
   </div>
 </header>
 
-<main class="pt-24 pb-20 px-6 max-w-2xl mx-auto">
+<main class="pt-24 pb-20 px-6 max-w-xl mx-auto text-center">
 
-  <!-- Hero -->
-  <section class="mb-12 text-center">
+  <section class="mb-10">
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6 forge-bloom">
       <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-      <span class="text-[10px] font-label font-bold uppercase tracking-widest text-secondary">Security Audit Checkout</span>
+      <span class="text-[10px] font-label font-bold uppercase tracking-widest text-secondary">Security Audit</span>
     </div>
     <h1 class="text-4xl md:text-5xl font-headline font-bold tracking-tight text-white mb-4">
       Order your web application<br/>security audit.
     </h1>
     <p class="text-on-surface-variant font-body leading-relaxed max-w-md mx-auto">
-      We probe your web app for real vulnerabilities — OWASP Top 10, exposed paths, misconfigurations, and more. You verify you own the target, we deliver a full PDF report with a remediation plan.
+      We probe your web app for real vulnerabilities — OWASP Top 10, exposed paths, misconfigurations, and more. Full PDF report with a remediation plan.
     </p>
   </section>
 
-  <!-- Trust chips -->
   <div class="flex flex-wrap justify-center gap-3 mb-10">
     <div class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container rounded-full text-xs font-label text-on-surface-variant">
       <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">shield</span>
@@ -124,332 +122,31 @@
     </div>
   </div>
 
-  <!-- Form card -->
-  <div class="bg-surface-container rounded-3xl p-6 md:p-8 shadow-2xl border border-outline-variant/10 relative overflow-hidden" id="form-container">
+  <div class="bg-surface-container rounded-3xl p-8 shadow-2xl border border-outline-variant/10 relative overflow-hidden">
     <div class="absolute top-0 right-0 w-48 h-48 bg-secondary/5 rounded-full -mr-24 -mt-24 blur-3xl pointer-events-none"></div>
-
-    <form id="security-form" class="space-y-8 relative z-10" novalidate>
-
-      <!-- Step 1 — Tier -->
-      <div>
-        <label class="text-xs font-label font-bold uppercase tracking-widest text-secondary block mb-3">
-          1. Select your scan tier
-        </label>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <label class="relative flex flex-col p-4 cursor-pointer rounded-xl border border-outline-variant/30 bg-surface-container-lowest hover:border-secondary/50 transition-all has-[input:checked]:border-secondary has-[input:checked]:bg-secondary/5">
-            <input type="radio" name="tier" value="starter" class="absolute opacity-0" required>
-            <div class="flex justify-between items-center mb-1">
-              <span class="font-headline font-bold text-white">Starter</span>
-              <span class="font-label font-bold text-secondary">$49</span>
-            </div>
-            <span class="text-xs text-on-surface-variant font-label">Surface scan — OWASP Top 10 fingerprint, headers, exposed paths</span>
-          </label>
-          <label class="relative flex flex-col p-4 cursor-pointer rounded-xl border border-outline-variant/30 bg-surface-container-lowest hover:border-secondary/50 transition-all has-[input:checked]:border-secondary has-[input:checked]:bg-secondary/5">
-            <input type="radio" name="tier" value="professional" class="absolute opacity-0" checked>
-            <div class="absolute -top-2 left-1/2 -translate-x-1/2 text-[8px] uppercase tracking-widest bg-secondary text-on-secondary px-2 py-0.5 rounded-full font-bold">Best Value</div>
-            <div class="flex justify-between items-center mb-1">
-              <span class="font-headline font-bold text-white">Professional</span>
-              <span class="font-label font-bold text-secondary">$149</span>
-            </div>
-            <span class="text-xs text-on-surface-variant font-label">Full scan — active probing, auth bypass, injection testing</span>
-          </label>
-          <label class="relative flex flex-col p-4 cursor-pointer rounded-xl border border-outline-variant/30 bg-surface-container-lowest hover:border-secondary/50 transition-all has-[input:checked]:border-secondary has-[input:checked]:bg-secondary/5">
-            <input type="radio" name="tier" value="agency" class="absolute opacity-0">
-            <div class="flex justify-between items-center mb-1">
-              <span class="font-headline font-bold text-white">Agency</span>
-              <span class="font-label font-bold text-secondary">$349</span>
-            </div>
-            <span class="text-xs text-on-surface-variant font-label">Deep scan — multi-subdomain, API surface, custom nuclei templates</span>
-          </label>
-        </div>
+    <div class="relative z-10">
+      <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-5 forge-bloom">
+        <span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">open_in_new</span>
       </div>
-
-      <!-- Step 2 — Target URL -->
-      <div>
-        <label for="url" class="text-xs font-label font-bold uppercase tracking-widest text-secondary block mb-3">
-          2. Target website URL
-        </label>
-        <input
-          id="url"
-          name="url"
-          type="url"
-          placeholder="https://target-website.com"
-          autocomplete="url"
-          inputmode="url"
-          class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 py-4 px-0 text-white placeholder:text-on-surface-variant/50 transition-colors"
-          required
-        />
-        <p id="url-error" class="hidden mt-2 text-xs text-error items-center gap-1.5">
-          <span class="material-symbols-outlined text-sm">error</span>
-          <span id="url-error-text">Please enter a valid https:// URL.</span>
-        </p>
-      </div>
-
-      <!-- Step 3 — Verification email -->
-      <div>
-        <label for="verification-email" class="text-xs font-label font-bold uppercase tracking-widest text-secondary block mb-3">
-          3. Verification contact email
-        </label>
-        <input
-          id="verification-email"
-          name="verification_email"
-          type="email"
-          placeholder="contact@target-website.com"
-          autocomplete="off"
-          class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 py-4 px-0 text-white placeholder:text-on-surface-variant/50 transition-colors"
-        />
-        <p class="mt-2 text-xs text-on-surface-variant/60">Must be an email at the target domain. We'll send a one-click ownership verification link there before scanning begins.</p>
-        <p id="verif-error" class="hidden mt-2 text-xs text-error items-center gap-1.5">
-          <span class="material-symbols-outlined text-sm">error</span>
-          <span id="verif-error-text">Email must be at the target domain (e.g. you@target-website.com).</span>
-        </p>
-      </div>
-
-      <!-- Step 4 — Report delivery email -->
-      <div>
-        <label for="client-email" class="text-xs font-label font-bold uppercase tracking-widest text-secondary block mb-3">
-          4. Where should we send the report? <span class="text-on-surface-variant/50 normal-case tracking-normal font-body font-normal">(optional)</span>
-        </label>
-        <input
-          id="client-email"
-          name="client_email"
-          type="email"
-          placeholder="your@email.com"
-          autocomplete="email"
-          class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 py-4 px-0 text-white placeholder:text-on-surface-variant/50 transition-colors"
-        />
-        <p class="mt-2 text-xs text-on-surface-variant/60">If left blank we'll send to the verification contact above.</p>
-      </div>
-
-      <!-- Step 5 — Rules of Engagement -->
-      <div class="rounded-xl border border-error/40 bg-error-container/10 p-5">
-        <div class="flex items-start gap-3 mb-4">
-          <span class="material-symbols-outlined text-error text-xl mt-0.5" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">warning</span>
-          <div>
-            <p class="font-headline font-bold text-white text-sm mb-2">Rules of Engagement</p>
-            <p class="text-xs text-on-surface-variant mb-1">By submitting this order you confirm:</p>
-            <ul class="text-xs text-on-surface-variant space-y-1 list-none">
-              <li class="flex items-start gap-1.5"><span class="text-error mt-0.5">•</span> You own or have written authorisation to test the target</li>
-              <li class="flex items-start gap-1.5"><span class="text-error mt-0.5">•</span> You will not hold EchoForge liable for service disruptions during testing</li>
-              <li class="flex items-start gap-1.5"><span class="text-error mt-0.5">•</span> Active scanning is rate-limited and scoped strictly to the submitted domain</li>
-            </ul>
-          </div>
-        </div>
-        <label class="flex items-center gap-3 cursor-pointer">
-          <input
-            type="checkbox"
-            id="tos-checkbox"
-            class="w-4 h-4 rounded border-outline-variant/50 bg-surface-container-lowest accent-secondary focus:ring-secondary/50"
-            required
-          />
-          <span class="text-xs font-label text-on-surface-variant">I confirm I have the right to authorise this security test</span>
-        </label>
-      </div>
-
-      <!-- API error -->
-      <p id="api-error" class="hidden text-sm text-error bg-error-container/30 rounded-xl px-4 py-3 items-center gap-2">
-        <span class="material-symbols-outlined text-base">error</span>
-        <span id="api-error-text"></span>
+      <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+        Orders are processed securely through our Fiverr gig. Click below to go directly to the order page.
       </p>
-
-      <!-- Submit -->
-      <div class="pt-2">
-        <button
-          type="submit"
-          id="submit-btn"
-          disabled
-          class="w-full py-5 rounded-2xl bg-secondary text-on-secondary font-headline font-bold text-lg active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2 forge-bloom disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100"
-        >
-          <span id="submit-label">Place order — $149</span>
-          <span class="material-symbols-outlined text-xl" id="submit-icon">security</span>
-        </button>
-        <p class="text-[10px] text-center mt-4 text-on-surface-variant/60 leading-relaxed">
-          By submitting you agree to our <a href="/legal/security-audit-tos/" class="underline hover:text-white transition-colors">Terms of Service</a>. You must own or have written authorisation to test the target domain. Delivery in 24–72 hours depending on tier.
-        </p>
-      </div>
-
-    </form>
-
-    <!-- Success state (hidden initially) -->
-    <div id="success-state" class="hidden text-center py-10">
-      <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6 forge-bloom">
-        <span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
-      </div>
-      <h2 class="text-2xl font-headline font-bold text-white mb-3">Order received — check your email.</h2>
-      <p class="text-on-surface-variant mb-4 leading-relaxed">
-        We've sent an ownership verification link to <strong id="verif-contact-display" class="text-white"></strong>.
-      </p>
-      <p class="text-sm text-on-surface-variant/70 mb-8 leading-relaxed">
-        Click the link to confirm you own the target, and your scan will begin automatically.<br/>
-        <span class="text-on-surface-variant/50">Delivery: 24–72 hours depending on scan tier. You will receive the full PDF report by email when complete.</span>
+      <a
+        href="http://www.fiverr.com/s/5rXXBAz"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 w-full py-5 rounded-2xl bg-secondary text-on-secondary font-headline font-bold text-lg active:scale-95 transition-all shadow-lg forge-bloom hover:opacity-90"
+      >
+        <span>Order on Fiverr</span>
+        <span class="material-symbols-outlined text-xl">security</span>
+      </a>
+      <p class="text-[10px] text-center mt-4 text-on-surface-variant/60 leading-relaxed">
+        You will be taken to our Fiverr gig page to complete your order securely.
       </p>
     </div>
-
   </div>
 
 </main>
 
-<script>
-(function () {
-  const tierPrices = { starter: '$49', professional: '$149', agency: '$349' };
-
-  const form          = document.getElementById('security-form');
-  const urlInput      = document.getElementById('url');
-  const verifInput    = document.getElementById('verification-email');
-  const clientEmail   = document.getElementById('client-email');
-  const tosCheckbox   = document.getElementById('tos-checkbox');
-  const submitBtn     = document.getElementById('submit-btn');
-  const submitLabel   = document.getElementById('submit-label');
-  const submitIcon    = document.getElementById('submit-icon');
-  const urlError      = document.getElementById('url-error');
-  const verifError    = document.getElementById('verif-error');
-  const apiError      = document.getElementById('api-error');
-  const apiErrorText  = document.getElementById('api-error-text');
-  const successState  = document.getElementById('success-state');
-  const verifDisplay  = document.getElementById('verif-contact-display');
-
-  let targetDomain = '';
-
-  // ── Helpers ────────────────────────────────────────────────────────────────
-
-  function extractDomain(url) {
-    try { return new URL(url).hostname.replace(/^www\./, ''); }
-    catch (_) { return ''; }
-  }
-
-  function isValidHttpsUrl(val) {
-    try { const u = new URL(val); return u.protocol === 'https:'; }
-    catch (_) { return false; }
-  }
-
-  function isVerificationEmailValid() {
-    const val = verifInput.value.trim();
-    if (!val) return true; // optional
-    if (!targetDomain) return false;
-    const emailDomain = (val.split('@')[1] || '').toLowerCase();
-    return emailDomain === targetDomain || emailDomain.endsWith('.' + targetDomain);
-  }
-
-  function showError(el) {
-    el.classList.remove('hidden');
-    el.classList.add('flex');
-  }
-
-  function hideError(el) {
-    el.classList.add('hidden');
-    el.classList.remove('flex');
-  }
-
-  // ── State update ───────────────────────────────────────────────────────────
-
-  function updateSubmitState() {
-    const selectedTier = (document.querySelector('input[name="tier"]:checked') || {}).value;
-    submitLabel.textContent = 'Place order — ' + (tierPrices[selectedTier] || '');
-
-    const urlValid   = isValidHttpsUrl(urlInput.value.trim());
-    const verifValid = isVerificationEmailValid();
-    const tosChecked = tosCheckbox.checked;
-
-    submitBtn.disabled = !urlValid || !verifValid || !tosChecked;
-
-    // inline URL error (only after user has typed something)
-    if (urlInput.value.trim() && !urlValid) {
-      showError(urlError);
-    } else {
-      hideError(urlError);
-    }
-
-    // inline verification email error (only after user has typed something)
-    if (verifInput.value.trim() && !isVerificationEmailValid()) {
-      showError(verifError);
-    } else {
-      hideError(verifError);
-    }
-  }
-
-  // ── Event listeners ────────────────────────────────────────────────────────
-
-  urlInput.addEventListener('input', function () {
-    targetDomain = extractDomain(urlInput.value.trim());
-    updateSubmitState();
-  });
-
-  verifInput.addEventListener('input', updateSubmitState);
-  tosCheckbox.addEventListener('change', updateSubmitState);
-
-  document.querySelectorAll('input[name="tier"]').forEach(function (radio) {
-    radio.addEventListener('change', updateSubmitState);
-  });
-
-  // Initial state
-  updateSubmitState();
-
-  // ── Submit ─────────────────────────────────────────────────────────────────
-
-  function setLoading(loading) {
-    submitBtn.disabled = loading;
-    if (loading) {
-      submitLabel.textContent = 'Submitting...';
-      submitIcon.innerHTML = '<svg class="animate-spin w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path></svg>';
-    } else {
-      submitLabel.textContent = 'Place order — ' + (tierPrices[document.querySelector('input[name="tier"]:checked')?.value] || '');
-      submitIcon.innerHTML = '';
-      submitIcon.textContent = 'security';
-      submitIcon.className = 'material-symbols-outlined text-xl';
-    }
-  }
-
-  async function submitOrder(payload) {
-    const res = await fetch('/api/ventures/security-audit/orders', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    if (!res.ok) {
-      const err = await res.json().catch(function () { return {}; });
-      throw new Error(err.detail || err.message || ('Error ' + res.status));
-    }
-    return res.json();
-  }
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    hideError(apiError);
-
-    // Final guard — button should already be disabled but double-check
-    if (!isValidHttpsUrl(urlInput.value.trim()) || !isVerificationEmailValid() || !tosCheckbox.checked) {
-      updateSubmitState();
-      return;
-    }
-
-    const selectedTier = document.querySelector('input[name="tier"]:checked').value;
-    const verifVal     = verifInput.value.trim();
-    const clientVal    = clientEmail.value.trim();
-
-    const payload = {
-      url:             urlInput.value.trim(),
-      tier:            selectedTier,
-      tos_accepted:    true,
-    };
-    if (verifVal)  payload.verification_email = verifVal;
-    if (clientVal) payload.client_email       = clientVal;
-
-    setLoading(true);
-
-    try {
-      await submitOrder(payload);
-
-      form.classList.add('hidden');
-      verifDisplay.textContent = verifVal || ('the domain contact for ' + targetDomain);
-      successState.classList.remove('hidden');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } catch (err) {
-      apiErrorText.textContent = err.message;
-      showError(apiError);
-      setLoading(false);
-    }
-  });
-})();
-</script>
 </body>
 </html>
