@@ -155,11 +155,12 @@
           id="email"
           name="email"
           type="email"
-          placeholder="your@email.com"
+          placeholder="you@yourwebsite.com"
           autocomplete="email"
           class="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 focus:border-tertiary focus:ring-0 py-4 px-0 text-white placeholder:text-on-surface-variant/50 transition-colors"
           required
         />
+        <p class="mt-2 text-[11px] text-on-surface-variant/60">Must use the same domain as the website above (e.g. you@acme.com for acme.com)</p>
         <p id="email-error" class="hidden mt-2 text-xs text-error flex items-center gap-1.5">
           <span class="material-symbols-outlined text-sm">error</span>
           <span id="email-error-text"></span>
@@ -315,6 +316,19 @@
     }
   }
 
+  function getUrlDomain(rawUrl) {
+    try {
+      return new URL(rawUrl).hostname.replace(/^www\./, '').toLowerCase();
+    } catch (_) {
+      return '';
+    }
+  }
+
+  function getEmailDomain(email) {
+    const parts = email.split('@');
+    return parts.length === 2 ? parts[1].toLowerCase() : '';
+  }
+
   function setLoading(loading) {
     submitBtn.disabled = loading || !tosCheckbox.checked;
     if (loading) {
@@ -392,6 +406,15 @@
     if (!emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
       showError(emailError, emailErrorText, 'Please enter a valid email address.');
       valid = false;
+    } else if (urlVal && isValidUrl(urlVal)) {
+      const urlDomain = getUrlDomain(urlVal);
+      const emailDomain = getEmailDomain(emailVal);
+      if (urlDomain && emailDomain && urlDomain !== emailDomain) {
+        showError(emailError, emailErrorText,
+          `Your email domain "${emailDomain}" must match the website domain "${urlDomain}". Please use an email address belonging to the website you're submitting.`
+        );
+        valid = false;
+      }
     }
 
     if (!valid) return;
